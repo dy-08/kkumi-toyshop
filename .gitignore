@@ -1,0 +1,8 @@
+# node modules
+node_modules/
+
+# 로그 파일
+*.log
+
+# IDE/에디터 설정
+.vscode/

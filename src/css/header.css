@@ -1,0 +1,11 @@
+.header__lists {
+    width: 100vw;
+    height: 60px;
+    background-color: rgb(37, 37, 37);
+    color: rgb(231, 231, 231);
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
