@@ -1,0 +1,242 @@
+[
+    {
+        "imageSrc": "./src/assets/images/recommend/5153371_17537567009271_500.webp",
+        "brandName": "머슬암드",
+        "itemName": "B.B 23 메쉬 저지 탱크탑 [블랙]",
+        "originPrice": "88,000",
+        "discount": "33",
+        "discountPrice": "59,000"
+    },
+    {
+        "imageSrc": "./src/assets/images/recommend/5152882_17485928918615_500.webp",
+        "brandName": "피지컬가먼츠",
+        "itemName": "P5042 샤이닝 트레이닝 반바지 [4COLOR]",
+        "originPrice": "55,700",
+        "discount": "30",
+        "discountPrice": "39,000"
+    },
+    {
+        "imageSrc": "./src/assets/images/recommend/5022806_17446064042520_500.webp",
+        "brandName": "언더아머",
+        "itemName": "테크 탱크 1382795-001",
+        "originPrice": "35,000",
+        "discount": "5",
+        "discountPrice": "33,250"
+    },
+    {
+        "imageSrc": "./src/assets/images/recommend/5234928_17520386450256_500.webp",
+        "brandName": "젝시믹스",
+        "itemName": "젤라 인텐션 바이커 쇼츠 3부 블랙 XP9172F",
+        "originPrice": "29,000",
+        "discount": "38",
+        "discountPrice": "18,000"
+    },
+    {
+        "imageSrc": "./src/assets/images/recommend/5154768_17484940968667_500.webp",
+        "brandName": "잠백이",
+        "itemName": "에센셜 락토프리 웨이프로틴 750g 11종",
+        "originPrice": "47,900",
+        "discount": "6",
+        "discountPrice": "44,900"
+    },
+    {
+        "imageSrc": "./src/assets/images/recommend/5152944_17485077817211_500.webp",
+        "brandName": "피지컬가먼츠",
+        "itemName": "P5041 배색 크롭 골지나시 [3COLOR]",
+        "originPrice": "35,700",
+        "discount": "30",
+        "discountPrice": "25,000"
+    },
+    {
+        "imageSrc": "./src/assets/images/recommend/5147112_17485879866427_500.webp",
+        "brandName": "드릭스",
+        "itemName": "바스켓볼 메시 저지 사이드 패널 슬리브리스_화이트",
+        "originPrice": "34,000",
+        "discount": "41",
+        "discountPrice": "19,990"
+    },
+    {
+        "imageSrc": "./src/assets/images/recommend/5142540_17479872590818_500.webp",
+        "brandName": "드릭스",
+        "itemName": "GRAPHIC BANDANA/SGRSTONE GREY",
+        "originPrice": "25,000",
+        "discount": "68",
+        "discountPrice": "8,000"
+    },
+    {
+        "imageSrc": "./src/assets/images/recommend/4958969_17446352904079_500.webp",
+        "brandName": "에이치덱스",
+        "itemName": "사이드 컬러 블럭 숏 슬리브 (White)",
+        "originPrice": "49,000",
+        "discount": "20",
+        "discountPrice": "39,200"
+    },
+    {
+        "imageSrc": "./src/assets/images/recommend/4957286_17431314752131_500.webp",
+        "brandName": "베트랙트",
+        "itemName": "스타일리쉬 원형 로고 오버 핏 반팔 블랙",
+        "originPrice": "39,000",
+        "discount": "30",
+        "discountPrice": "27,300"
+    },
+    {
+        "imageSrc": "./src/assets/images/recommend/4930781_17426325683295_500.webp",
+        "brandName": "크러쉬 스타일",
+        "itemName": "세븐 투핀턱 와이드 스웻팬츠 피그먼트",
+        "originPrice": "69,000",
+        "discount": "30",
+        "discountPrice": "48,300"
+    },
+    {
+        "imageSrc": "./src/assets/images/recommend/4866224_17412453233890_500.webp",
+        "brandName": "언더아머",
+        "itemName": "이그나이트 프로 8 슬라이드 6000337-022",
+        "originPrice": "49,000",
+        "discount": "20",
+        "discountPrice": "39,200"
+    },
+    {
+        "imageSrc": "./src/assets/images/recommend/4814987_17419292599021_500.webp",
+        "brandName": "페르메논",
+        "itemName": "에센셜 오버핏 버뮤다 쇼츠 - 화이트",
+        "originPrice": "45,000",
+        "discount": "34",
+        "discountPrice": "29,900"
+    },
+    {
+        "imageSrc": "./src/assets/images/recommend/4675419_17540304381881_500.webp",
+        "brandName": "플라이밀",
+        "itemName": "단백질 쉐이크 대용량 9가지 맛 프로틴 (630g,14일분)",
+        "originPrice": "27,900",
+        "discount": "",
+        "discountPrice": ""
+    },
+    {
+        "imageSrc": "./src/assets/images/recommend/4535845_17294828494007_500.webp",
+        "brandName": "터틀백",
+        "itemName": "TBK 나일론 삥줄 스트링 팬츠 (블랙)",
+        "originPrice": "159,000",
+        "discount": "",
+        "discountPrice": ""
+    },
+    {
+        "imageSrc": "./src/assets/images/recommend/4800317_17399278674462_500.webp",
+        "brandName": "리복",
+        "itemName": "뉴베이직 크롭 윈드 브레이커 (W) - 화이트",
+        "originPrice": "49,000",
+        "discount": "",
+        "discountPrice": ""
+    },
+    {
+        "imageSrc": "./src/assets/images/recommend/4208150_17199741916109_500.webp",
+        "brandName": "나이키",
+        "itemName": "드라이 핏 클럽 스트럭처 스우시 캡 - 블랙:화이트 / FB5625-010",
+        "originPrice": "35,000",
+        "discount": "5",
+        "discountPrice": "33,250"
+    },
+    {
+        "imageSrc": "./src/assets/images/recommend/4247493_17417555803001_500.webp",
+        "brandName": "페르메논",
+        "itemName": "스탠다드 로고 절개 나시 - 블랙",
+        "originPrice": "45,000",
+        "discount": "45",
+        "discountPrice": "24,900"
+    },
+    {
+        "imageSrc": "./src/assets/images/recommend/4189916_17186092568604_big.webp",
+        "brandName": "피지컬가먼츠",
+        "itemName": "P5025 우먼 라운드 크롭나시 [4 COLOR]",
+        "originPrice": "22,900",
+        "discount": "30",
+        "discountPrice": "16,000"
+    },
+    {
+        "imageSrc": "./src/assets/images/recommend/4028787_17191977813191_500.webp",
+        "brandName": "레디포넥스트",
+        "itemName": "스포츠 풋볼 져지 반팔 티셔츠 BLACK",
+        "originPrice": "59,900",
+        "discount": "62",
+        "discountPrice": "23,000"
+    },
+    {
+        "imageSrc": "./src/assets/images/recommend/3572490_16952716547042_big.webp",
+        "brandName": "피지컬가먼츠",
+        "itemName": "P5016 우먼 라이트 부츠컷 레깅스 [블랙]",
+        "originPrice": "56,900",
+        "discount": "30",
+        "discountPrice": "39,800"
+    },
+    {
+        "imageSrc": "./src/assets/images/recommend/2073553_17386321548768_500.webp",
+        "brandName": "피지컬가먼츠",
+        "itemName": "시그니처 스몰 로고 볼캡 8color",
+        "originPrice": "35,000",
+        "discount": "20",
+        "discountPrice": "28,000"
+    },
+    {
+        "imageSrc": "./src/assets/images/recommend/2467287_17522115112632_500.webp",
+        "brandName": "에이치덱스",
+        "itemName": "메인로고 웨일 쇼츠",
+        "originPrice": "39,000",
+        "discount": "20",
+        "discountPrice": "31,200"
+    },
+    {
+        "imageSrc": "./src/assets/images/recommend/3112617_17530766023828_500.webp",
+        "brandName": "몰든",
+        "itemName": "에어리즈 슬리브리스",
+        "originPrice": "29,000",
+        "discount": "33",
+        "discountPrice": "19,400"
+    },
+    {
+        "imageSrc": "./src/assets/images/recommend/3487682_16927705497221_500.webp",
+        "brandName": "언더아머",
+        "itemName": "언디나이어블 5.0 XS 더플 백 1369221-001",
+        "originPrice": "59,000",
+        "discount": "5",
+        "discountPrice": "56,050"
+    },
+    {
+        "imageSrc": "./src/assets/images/recommend/3730893_17116701202295_500.webp",
+        "brandName": "무신사 스탠다드 스포츠",
+        "itemName": "짐 보스턴 백 [블랙]",
+        "originPrice": "75,000",
+        "discount": "10",
+        "discountPrice": "68,390"
+    },
+    {
+        "imageSrc": "./src/assets/images/recommend/4214083_17191554564512_500.webp",
+        "brandName": "바벨웍스",
+        "itemName": "아치베어 오버핏",
+        "originPrice": "46,000",
+        "discount": "39",
+        "discountPrice": "28,000"
+    },
+    {
+        "imageSrc": "./src/assets/images/recommend/5006627_17441812301777_big.webp",
+        "brandName": "프리덤",
+        "itemName": "렉잇 레터링 버뮤다 쇼츠 (블랙)",
+        "originPrice": "82,000",
+        "discount": "30",
+        "discountPrice": "57,400"
+    },
+    {
+        "imageSrc": "./src/assets/images/recommend/4970847_17452169864660_500.webp",
+        "brandName": "에이치덱스",
+        "itemName": "[HDEX x OTOKI] 컴포트 크랙 슬리브리스 (White)",
+        "originPrice": "42,000",
+        "discount": "30",
+        "discountPrice": "29,400"
+    },
+    {
+        "imageSrc": "./src/assets/images/recommend/4873660_17417569864403_500.webp",
+        "brandName": "나이키",
+        "itemName": "프로 드라이 핏 피트니스 롱 쇼츠 M - 블랙:화이트 / FB7964-010",
+        "originPrice": "35,000",
+        "discount": "",
+        "discountPrice": ""
+    }
+]
