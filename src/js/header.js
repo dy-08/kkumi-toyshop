@@ -1,22 +1,36 @@
 export function renderHeader() {
     const header = document.querySelector('header');
     header.innerHTML = `
-      <nav>
-        <ul class="header__lists">
-          <li id="header__home">홈</li>
-          <li id="header__product">상품목록</li>
-          <li id="header__cart">장바구니</li>
-        </ul>
-      </nav>`;
-
-    // 이벤트 등록
-    document
-        .getElementById('header__home')
-        .addEventListener('click', () => window.renderPage('home'));
-    document
-        .getElementById('header__product')
-        .addEventListener('click', () => window.renderPage('product'));
-    document
-        .getElementById('header__cart')
-        .addEventListener('click', () => window.renderPage('cart'));
+    <nav>
+      <div class="header__navBox">
+        <div class="header__leftBox">
+          <span class="material-symbols-outlined menu">menu</span>
+          <button>MUSINSA</button>
+          <button>BEAUTY</button>
+          <button>PLAYER</button>
+          <button>OUTLET</button>
+          <button>BOUTIQOE</button>
+          <button>SHOES</button>
+          <button>KIDS</button>
+          <button>(S)SNAP</button>
+        </div>
+        <div class="header__rightBox">
+          <button>오프라인스토어</button>
+          <button>
+            <span class="material-symbols-outlined">search</span><span>검색</span>
+          </button>
+          <button>
+           <span class="material-symbols-outlined">favorite</span><span>좋아요</span>
+          </button>
+          <button>
+           <span class="material-symbols-outlined">person</span><span>마이</span>
+          </button>
+          <button>
+           <span class="material-symbols-outlined">shopping_bag</span><span>장바구니</span>
+          </button>
+          <button>로그인 / 회원가입</button>
+        </div>
+      </div>
+    </nav>
+`;
 }

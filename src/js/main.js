@@ -27,4 +27,3 @@ window.renderPage = function (page) {
 };
 
 // 최초 페이지 로드
-renderPage('home');
