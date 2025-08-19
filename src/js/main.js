@@ -2,6 +2,7 @@ import { renderHeader } from './header.js';
 import { renderHome } from './home.js';
 import { renderProduct } from './product.js';
 import { renderCart } from './cart.js';
+import { renderSlider } from './slider.js';
 
 const app = document.getElementById('app');
 const header = document.querySelector('header');
@@ -21,6 +22,9 @@ window.renderPage = function (page) {
         case 'cart':
             renderCart();
             break;
+        case 'slider':
+            renderSlider();
+            break;
         default:
             app.innerHTML = `<p>documentPage not found</p>`;
     }
@@ -28,3 +32,4 @@ window.renderPage = function (page) {
 
 // 최초 페이지 로드
 renderPage('home');
+renderPage('slider')
