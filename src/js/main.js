@@ -2,6 +2,7 @@ import { renderHeader } from './header.js';
 import { renderHome } from './home.js';
 import { renderProduct } from './product.js';
 import { renderCart } from './cart.js';
+import { renderSearch } from './search.js';
 
 const app = document.getElementById('app');
 const header = document.querySelector('header');
@@ -21,10 +22,13 @@ window.renderPage = function (page) {
         case 'cart':
             renderCart();
             break;
+        case 'search':
+            renderSearch();
+            break;
         default:
             app.innerHTML = `<p>documentPage not found</p>`;
     }
 };
 
 // 최초 페이지 로드
-renderPage('home');
+renderPage('search');
