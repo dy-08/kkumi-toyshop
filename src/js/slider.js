@@ -2,16 +2,15 @@ export function renderSlider() {
     const app = document.getElementById('app');
     app.innerHTML = `<section id="slideShow">
         <ul class="slides">
-            <li><img src="./src/assets/images/slider/flower.jpg" alt="flower"></li>
-            <li><img src="./src/assets/images/slider/fox.jpg" alt="fox"></li>
-            <li><img src="./src/assets/images/slider/lightning.jpg" alt="lightning"></li>
-            <li><img src="./src/assets/images/slider/moon.jpg" alt="moon"></li>
-            <li><img src="./src/assets/images/slider/nature.jpg" alt="nature"></li>
-            <li><img src="./src/assets/images/slider/building.jpg" alt="building"></li>
-            <li><img src="./src/assets/images/slider/harvestmoon.jpg" alt="harvestmoon"></li>
-            <li><img src="./src/assets/images/slider/tower.jpg" alt="tower"></li>
-            <li><img src="./src/assets/images/slider/flower.jpg" alt="flower"></li>
-            <li><img src="./src/assets/images/slider/fox.jpg" alt="fox"></li>
+            <li><img src="./src/assets/images/slider/musinsa01.jpg" alt="01"></li>
+            <li><img src="./src/assets/images/slider/musinsa02.jpg" alt="02"></li>
+            <li><img src="./src/assets/images/slider/musinsa03.jpg" alt="03"></li>
+            <li><img src="./src/assets/images/slider/musinsa04.jpg" alt="04"></li>
+            <li><img src="./src/assets/images/slider/musinsa05.jpg" alt="05"></li>
+            <li><img src="./src/assets/images/slider/musinsa06.jpg" alt="06"></li>
+            <li><img src="./src/assets/images/slider/musinsa07.jpg" alt="07"></li>
+            <li><img src="./src/assets/images/slider/musinsa08.jpg" alt="08"></li>
+            <li><img src="./src/assets/images/slider/musinsa09.jpg" alt="09"></li>
             
         </ul>
         <p class="controller">
