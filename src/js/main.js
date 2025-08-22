@@ -3,6 +3,7 @@ import { renderHome } from './home.js';
 import { renderProduct } from './product.js';
 import { renderCart } from './cart.js';
 import { renderRecommend } from './recommend.js';
+import { renderSearch } from './search.js';
 
 const app = document.getElementById('app');
 const header = document.querySelector('header');
@@ -23,6 +24,8 @@ window.renderPage = function (page) {
             break;
         case 'recommend':
             renderRecommend();
+        case 'search':
+            renderSearch();
             break;
         default:
             app.innerHTML = `<p>documentPage not found</p>`;
@@ -31,3 +34,4 @@ window.renderPage = function (page) {
 
 // 최초 페이지 로드
 renderPage('recommend');
+renderPage('search');
