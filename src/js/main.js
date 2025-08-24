@@ -2,8 +2,9 @@ import { renderHeader } from './header.js';
 import { renderHome } from './home.js';
 import { renderProduct } from './product.js';
 import { renderCart } from './cart.js';
-import { renderRecommend } from './recommend.js';
 import { renderSearch } from './search.js';
+import { renderSlider } from './slider.js';
+import { renderRecommend } from './recommend.js';
 
 const app = document.getElementById('app');
 const header = document.querySelector('header');
@@ -22,10 +23,14 @@ window.renderPage = function (page) {
         case 'cart':
             renderCart();
             break;
-        case 'recommend':
-            renderRecommend();
         case 'search':
             renderSearch();
+            break;
+        case 'slider':
+            renderSlider();
+            break;
+        case 'recommend':
+            renderRecommend();
             break;
         default:
             app.innerHTML = `<p>documentPage not found</p>`;
@@ -33,5 +38,7 @@ window.renderPage = function (page) {
 };
 
 // 최초 페이지 로드
+renderPage('slider')
 renderPage('recommend');
 renderPage('search');
+
