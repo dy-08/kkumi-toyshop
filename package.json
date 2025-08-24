@@ -1,31 +1,31 @@
 {
-  "name": "kkumi-toyshop",
-  "version": "1.0.0",
-  "description": "프론트엔드 실전 연습 : 개꾸미 팀의 기능별 쇼핑몰 구축기",
-  "main": "src/main.js",
-  "scripts": {
-    "start": "live-server",
-    "format": "prettier --write .",
-    "lint": "eslint ./src"
-  },
-  "keywords": [
-    "SAP",
-    "toy-project",
-    "frontend",
-    "vanilla-js"
-  ],
-  "author": "Team kkumi",
-  "license": "MIT",
-  "devDependencies": {
-    "@eslint/css": "^0.10.0",
-    "@eslint/js": "^9.32.0",
-    "eslint": "^8.39.0",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-import": "^2.32.0",
-    "eslint-plugin-prettier": "^5.5.3",
-    "globals": "^16.3.0",
-    "live-server": "^1.2.2",
-    "prettier": "^3.6.2"
-  }
+    "name": "kkumi-toyshop",
+    "version": "1.0.0",
+    "description": "프론트엔드 실전 연습 : 개꾸미 팀의 기능별 쇼핑몰 구축기",
+    "main": "src/main.js",
+    "scripts": {
+        "start": "live-server",
+        "format": "prettier --write .",
+        "lint": "eslint ./src"
+    },
+    "keywords": [
+        "SAP",
+        "toy-project",
+        "frontend",
+        "vanilla-js"
+    ],
+    "author": "Team kkumi",
+    "license": "MIT",
+    "devDependencies": {
+        "@eslint/css": "^0.10.0",
+        "@eslint/js": "^9.32.0",
+        "eslint": "^8.39.0",
+        "eslint-config-airbnb-base": "^15.0.0",
+        "eslint-config-prettier": "^10.1.8",
+        "eslint-plugin-import": "^2.32.0",
+        "eslint-plugin-prettier": "^5.5.3",
+        "globals": "^16.3.0",
+        "live-server": "^1.2.2",
+        "prettier": "^3.6.2"
+    }
 }

@@ -1,7 +1,8 @@
 export function renderSearch() {
-    const app = document.getElementById('app');
-    app.innerHTML = `
-      <section class="search">
+    const section = document.createElement('section');
+    section.className = 'search';
+
+    section.innerHTML = `
         <div id="search">
             <div class="search__wrap">
                 <div class="search__inner">
@@ -163,75 +164,76 @@ export function renderSearch() {
                 <a href="#none">발매</a>
             </li>
         </ul>
-    </section>
-
   `;
-  
-  // 검색창 클릭 시 검색팝업 open
-          let searchPopUp = document.querySelector('.search__popup_wrap');
-          let bodyFix = document.querySelector('body');
-          window.searchInput = function(){
-              searchPopUp.style.display = 'block';
-              bodyFix.classList.add('fixed');
-          }
-          window.searchPopClose = function(){
-              searchPopUp.style.display = 'none';
-              bodyFix.classList.remove('fixed');
-          }
-          
-          // 최근 검색어 삭제
-          let delBtn = document.querySelectorAll('.keyword__recent--Delete');
-          let delList = document.querySelector('.keyword__recent__list');
-          delBtn.forEach(function(item){
-              item.addEventListener('click', () => {
-                  item.closest('li').remove();
-                  if(delList.childElementCount == 0){ // li 개수가 없을 경우, 최근 검색어 창 삭제
-                      document.querySelector('.keyword__box').remove();
-                  }
-              });
-          })
-  
-          // 최근 검색어 모두삭제
-          let allDelBtn = document.getElementById('keyword__all--Delete');
-          allDelBtn.addEventListener('click', () => {
-              document.querySelector('.keyword__box').remove();
-          });
-  
-          // 날짜계산
-          let today = new Date();
-          let month = today.getMonth() + 1;
-          let date = today.getDate();
-          let todayWrap = document.querySelectorAll('.search__keyword__time');
-  
-          //시간계산
-          let hours = today.getHours();
-          let minutes = today.getMinutes();
-          
-          todayWrap.forEach( (time) =>{
-              if(month < 10){
-                  time.innerText = `0${month}.${date} ${hours}:${minutes}, 기준`;
-              }else{
-                  time.innerText = `${month}.${date}  ${hours}:${minutes}, 기준`;
-              }
-          })
-          
-          // 메인탭 상단 고정
-          let mainTabOffsetTop;
-  
-          window.addEventListener('DOMContentLoaded', () => {
-              let mainTab = document.querySelector('.mainTab');
-              mainTabOffsetTop = mainTab.offsetTop;
-  
-              scrollTab(); // 초기 실행
-              window.addEventListener('scroll', scrollTab);
-          });
-          function scrollTab(){
-              let mainTab = document.querySelector('.mainTab');
-              let windowS = window.scrollY;
-              if(windowS >= mainTabOffsetTop){
-                  mainTab.classList.add('fixed');
-              }else{
-                  mainTab.classList.remove('fixed');
-              };
-          };
+    const app = document.getElementById('app');
+    app.appendChild(section);
+
+    // 검색창 클릭 시 검색팝업 open
+    let searchPopUp = document.querySelector('.search__popup_wrap');
+    let bodyFix = document.querySelector('body');
+    window.searchInput = function () {
+        searchPopUp.style.display = 'block';
+        bodyFix.classList.add('fixed');
+    };
+    window.searchPopClose = function () {
+        searchPopUp.style.display = 'none';
+        bodyFix.classList.remove('fixed');
+    };
+
+    // 최근 검색어 삭제
+    let delBtn = document.querySelectorAll('.keyword__recent--Delete');
+    let delList = document.querySelector('.keyword__recent__list');
+    delBtn.forEach(function (item) {
+        item.addEventListener('click', () => {
+            item.closest('li').remove();
+            if (delList.childElementCount == 0) {
+                // li 개수가 없을 경우, 최근 검색어 창 삭제
+                document.querySelector('.keyword__box').remove();
+            }
+        });
+    });
+
+    // 최근 검색어 모두삭제
+    let allDelBtn = document.getElementById('keyword__all--Delete');
+    allDelBtn.addEventListener('click', () => {
+        document.querySelector('.keyword__box').remove();
+    });
+
+    // 날짜계산
+    let today = new Date();
+    let month = today.getMonth() + 1;
+    let date = today.getDate();
+    let todayWrap = document.querySelectorAll('.search__keyword__time');
+
+    //시간계산
+    let hours = today.getHours();
+    let minutes = today.getMinutes();
+
+    todayWrap.forEach((time) => {
+        if (month < 10) {
+            time.innerText = `0${month}.${date} ${hours}:${minutes}, 기준`;
+        } else {
+            time.innerText = `${month}.${date}  ${hours}:${minutes}, 기준`;
+        }
+    });
+
+    // 메인탭 상단 고정
+    let mainTabOffsetTop;
+
+    window.addEventListener('DOMContentLoaded', () => {
+        let mainTab = document.querySelector('.mainTab');
+        mainTabOffsetTop = mainTab.offsetTop;
+
+        scrollTab(); // 초기 실행
+        window.addEventListener('scroll', scrollTab);
+    });
+    function scrollTab() {
+        let mainTab = document.querySelector('.mainTab');
+        let windowS = window.scrollY;
+        if (windowS >= mainTabOffsetTop) {
+            mainTab.classList.add('fixed');
+        } else {
+            mainTab.classList.remove('fixed');
+        }
+    }
 }

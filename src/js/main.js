@@ -1,44 +1,34 @@
 import { renderHeader } from './header.js';
-import { renderHome } from './home.js';
-import { renderProduct } from './product.js';
-import { renderCart } from './cart.js';
 import { renderSearch } from './search.js';
 import { renderSlider } from './slider.js';
 import { renderRecommend } from './recommend.js';
 
 const app = document.getElementById('app');
-const header = document.querySelector('header');
 
-// 초기 페이지 렌더링
-
-// 페이지 전환 함수 (전역 등록)
-window.renderPage = function (page) {
+// 페이지 별 기능 그룹화
+function home() {
+    renderHeader();
+    renderSearch();
+    renderSlider();
+    renderRecommend();
+}
+// 해시값에 따른 페이지 렌더링 함수
+function renderPage(page) {
     switch (page) {
         case 'home':
-            renderHome();
-            break;
-        case 'product':
-            renderProduct();
-            break;
-        case 'cart':
-            renderCart();
-            break;
-        case 'search':
-            renderSearch();
-            break;
-        case 'slider':
-            renderSlider();
-            break;
-        case 'recommend':
-            renderRecommend();
+            home();
             break;
         default:
             app.innerHTML = `<p>documentPage not found</p>`;
     }
-};
+}
 
-// 최초 페이지 로드
-renderPage('slider')
-renderPage('recommend');
-renderPage('search');
+// 해시 변경 이벤트 처리기
+function handleHashRoute() {
+    const page = location.hash.replace('#/', '') || 'home';
+    renderPage(page);
+}
 
+// 이벤트 리스너 등록
+window.addEventListener('hashchange', handleHashRoute);
+window.addEventListener('DOMContentLoaded', handleHashRoute);

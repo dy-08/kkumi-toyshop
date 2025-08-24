@@ -1,7 +1,8 @@
 export function renderRecommend() {
-    const app = document.getElementById('app');
-    app.innerHTML = `
-    <section id="recommend">
+    const section = document.createElement('section');
+    section.id = 'recommend';
+
+    section.innerHTML = `
             <div class="recommend__wrap">
                 <div class="recommend__contents">
                     <!-- . -->
@@ -39,8 +40,9 @@ export function renderRecommend() {
                     /></span>
                 </div>
             </div>
-        </section>
     `;
+    const app = document.getElementById('app');
+    app.appendChild(section);
 
     function addItem(obj) {
         const itemBox = document.querySelector('.recommend__itemsInner');
