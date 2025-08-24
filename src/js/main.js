@@ -2,13 +2,14 @@ import { renderHeader } from './header.js';
 import { renderHome } from './home.js';
 import { renderProduct } from './product.js';
 import { renderCart } from './cart.js';
+import { renderSearch } from './search.js';
 import { renderSlider } from './slider.js';
+import { renderRecommend } from './recommend.js';
 
 const app = document.getElementById('app');
 const header = document.querySelector('header');
 
 // 초기 페이지 렌더링
-renderHeader();
 
 // 페이지 전환 함수 (전역 등록)
 window.renderPage = function (page) {
@@ -22,8 +23,14 @@ window.renderPage = function (page) {
         case 'cart':
             renderCart();
             break;
+        case 'search':
+            renderSearch();
+            break;
         case 'slider':
             renderSlider();
+            break;
+        case 'recommend':
+            renderRecommend();
             break;
         default:
             app.innerHTML = `<p>documentPage not found</p>`;
@@ -31,5 +38,7 @@ window.renderPage = function (page) {
 };
 
 // 최초 페이지 로드
-renderPage('home');
 renderPage('slider')
+renderPage('recommend');
+renderPage('search');
+

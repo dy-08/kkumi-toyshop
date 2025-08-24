@@ -1,11 +1,81 @@
-.header__lists {
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+body {
     width: 100vw;
+}
+nav {
+    width: 100%;
     height: 60px;
-    background-color: rgb(37, 37, 37);
-    color: rgb(231, 231, 231);
-    font-weight: bold;
+    background-color: #1a1b1f;
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 100px;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.header__navBox {
+    width: 1440px;
+    display: flex;
+    padding: 0 10px;
+}
+.menu {
+    color: #ffffffcc;
+}
+.header__leftBox {
+    width: 60%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+}
+
+.header__rightBox {
+    width: 40%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 4px;
+}
+.header__rightBox button span {
+}
+
+button {
+    background-color: transparent;
+    color: #ffffffcc;
+    border: none;
+    padding: 0 4px;
+}
+.header__leftBox :nth-child(2) {
+    border-left: 1px solid #ffffffcc;
+}
+.header__leftBox :nth-child(9) {
+    border-left: 1px solid#ffffffcc;
+}
+.header__rightBox > button:first-child {
+    border-right: 1px solid #ffffffcc;
+    padding-right: 8px;
+    margin-right: 1px;
+    margin-left: 4px;
+}
+
+.header__rightBox :nth-child(6) {
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #ffffffcc;
+}
+.header__rightBox button {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: none;
+    border: none;
+    color: #ffffffcc;
+    padding: 0 6px;
+    cursor: pointer;
 }
