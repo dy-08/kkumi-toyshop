@@ -8,8 +8,8 @@ export function renderRecommend() {
                     <!-- . -->
                     <div class="recommend__fitness">
                         <p>
-                            스포츠 종목 아이템 추천<br />
-                            피트니스
+                            지금 무신사 카테고리 트렌드<br />
+                            아우터
                         </p>
                     </div>
 
@@ -21,23 +21,22 @@ export function renderRecommend() {
                     </div>
 
                     <!-- Web to anotherWeb -->
-                    <div class="recommend__btnWrap">
+                    <button class="recommend__btnWrap">
                         <span class="recommend__p"><span></span></span>
                         <span>무신사 플레이어에서 더보기</span>
-                    </div>
-
+                    </button>
                     <!-- slide btns -->
                     <!-- arrows: 40x40(20x20) -->
-                    <span class="recommend__btn--pre"
+                    <button class="recommend__btn--pre"
                         ><img   
                             src="./src/assets/icons/svg/recommend/arrow_back_ios_20dp_000000_FILL0_wght200_GRAD0_opsz20.svg"
                             alt="이전화살표 아이콘"
-                    /></span>
-                    <span class="recommend__btn--next"
+                    /></button>
+                    <button class="recommend__btn--next"
                         ><img
                             src="./src/assets/icons/svg/recommend/arrow_forward_ios_20dp_000000_FILL0_wght200_GRAD0_opsz20.svg"
                             alt="다음화살표 아이콘"
-                    /></span>
+                    /></button>
                 </div>
             </div>
     `;
@@ -48,9 +47,12 @@ export function renderRecommend() {
         const itemBox = document.querySelector('.recommend__itemsInner');
         const div = document.createElement('div');
         div.className = 'recommend__items';
+        const a = document.createElement('a');
+        a.className = 'recommend__item';
+        a.style.cursor = 'pointer';
         const div10 = document.createElement('div');
         div10.className = 'recommend__itemTop';
-        div10.style.backgroundImage = `url(${obj.imageSrc})`;
+        div10.style.backgroundImage = `url(${obj.mainImageSrc})`;
         const span = document.createElement('span');
         span.className = 'recommend__iconFavorite';
         div10.appendChild(span);
@@ -86,17 +88,37 @@ export function renderRecommend() {
         div20.appendChild(div21);
         div20.appendChild(div22);
         div20.appendChild(div23);
-        div.appendChild(div10);
-        div.appendChild(div20);
+        a.appendChild(div10);
+        a.appendChild(div20);
+        div.appendChild(a);
         itemBox.appendChild(div);
     }
 
     // 아이템 추가
-    fetch('./public/data/recommend.json')
+    fetch('./public/data/outer.json')
         .then((response) => response.json())
         .then((data) => {
             data.forEach((item) => {
                 addItem(item);
+            });
+            document.querySelectorAll('.recommend__item').forEach((item, idx) => {
+                // json의 인덱스번호를 확인했음!
+                // 어떻게 Detail로 넘길수있을지 생각해야함
+                item.addEventListener('click', (e) => {
+                    // console.log(e.target);
+                    // console.log('clicked', idx);
+                    const urlLength = e.target.style.backgroundImage.length;
+                    // console.log('urlL', urlLength);
+                    // console.log(e.target.style.backgroundImage.substr(5, urlLength - 7));
+                    localStorage.setItem('productIndex', idx);
+                    localStorage.setItem(
+                        'productImageUrl',
+                        e.target.style.backgroundImage.substr(6, urlLength - 8)
+                    );
+                    console.log(localStorage.getItem('productIndex'));
+                    console.log(localStorage.getItem('productImageUrl'));
+                    // window.location.href = '/detail';
+                });
             });
         });
 
@@ -126,7 +148,9 @@ export function renderRecommend() {
     });
     document.addEventListener('mousemove', (e) => {
         if (!isDown) return;
+
         const dx = e.pageX - startX;
+
         currentTranslateX += dx;
         startX = e.pageX;
         btnPre.style.opacity = 1;

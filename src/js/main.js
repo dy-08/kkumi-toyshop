@@ -19,7 +19,7 @@ function renderPage(page) {
             home();
             break;
         default:
-            app.innerHTML = `<p>documentPage not found</p>`;
+            app.innerHTML = `<p>page not found</p>`;
     }
 }
 

@@ -12,16 +12,21 @@ body {
 }
 #recommend {
     width: 100%;
-    padding-top: 16px; /**/
+    /* 1. #recommend padding값 삭제 */
+    /* padding-top: 16px; */
 }
 .recommend__wrap {
     width: 100%;
     background-color: #f5f5f5;
 }
 .recommend__contents {
-    width: calc(100vw * 0.75);
+    /* 2. calc❌, width100%, max-width 1440px 적용완료 */
+    /* 3. 안에 bg 삭제완료 */
+    /* width: calc(100vw * 0.75); */
+    width: 100%;
+    max-width: 1440px;
     margin: 0 auto;
-    background-color: #eeeeee88;
+    /* background-color: #eeeeee88; */
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -115,6 +120,7 @@ body {
     gap: 4px;
     margin-bottom: 16px; /**/
 }
+/*  */
 .recommend__btnWrap span {
     font-size: 14px;
     color: #fff;
@@ -135,7 +141,6 @@ body {
     top: 50%;
     transform: translate(-50%, -50%);
 }
-
 /* slide btns */
 .recommend__btn--pre,
 .recommend__btn--next {
