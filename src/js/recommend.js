@@ -53,9 +53,9 @@ export function renderRecommend() {
         const div10 = document.createElement('div');
         div10.className = 'recommend__itemTop';
         div10.style.backgroundImage = `url(${obj.mainImageSrc})`;
-        const span = document.createElement('span');
-        span.className = 'recommend__iconFavorite';
-        div10.appendChild(span);
+        const button = document.createElement('button');
+        button.className = 'recommend__iconFavorite';
+        div10.appendChild(button);
         const div20 = document.createElement('div');
         div20.className = 'recommend__itemBottom';
         const div21 = document.createElement('div');
@@ -93,6 +93,48 @@ export function renderRecommend() {
         div.appendChild(a);
         itemBox.appendChild(div);
     }
+    // 하트클릭 시 이벤트 (로그인체크)
+    let isClicked = false;
+    function checkLogin(idx, e) {
+        e.stopPropagation(); // 이벤트 버블링 방지
+        isClicked = true;
+        if (!isNaN(idx)) {
+            const isLogin = localStorage.getItem('user');
+            // let isLogin = true; // ✅ 테스트 후 삭제
+            if (!isLogin) {
+                const res = confirm(
+                    '로그인 후 이용할 수 있습니다.\n로그인 페이지로 이동하시겠습니까?'
+                );
+                if (res) {
+                    window.location.hash = '#/login';
+                } else {
+                    isClicked = false;
+                }
+            } else {
+                const fb = document.querySelectorAll('.recommend__iconFavorite')[idx];
+                fb.classList.toggle('selected');
+                if (fb.classList.contains('selected')) {
+                    fb.style.transform = 'scale(1.3)';
+                    setTimeout(() => {
+                        fb.style.transition = 'all 0.3s ease';
+                        fb.style.transform = 'scale(1.1)';
+                    }, 100);
+                } else {
+                    fb.style.transform = 'scale(1)';
+                    fb.style.transition = 'none';
+                }
+                isClicked = false;
+            }
+        }
+    }
+    // 아이템 선택 시 이벤트 (로컬스토리지에 저장)
+    function fetchAndStoreData(idx) {
+        fetch('./public/data/outer.json')
+            .then((response) => response.json())
+            .then((data) => {
+                localStorage.setItem('item', JSON.stringify(data[idx]));
+            });
+    }
 
     // 아이템 추가
     fetch('./public/data/outer.json')
@@ -101,23 +143,26 @@ export function renderRecommend() {
             data.forEach((item) => {
                 addItem(item);
             });
+            // 상품 클릭시 이벤트
             document.querySelectorAll('.recommend__item').forEach((item, idx) => {
-                // json의 인덱스번호를 확인했음!
-                // 어떻게 Detail로 넘길수있을지 생각해야함
+                item.addEventListener('click', () => {
+                    if (isClicked) {
+                        isClicked = false;
+                        return;
+                    }
+                    fetchAndStoreData(idx);
+                    // 코드리뷰 후 삭제 ✅
+                    // loadDataFromLocalStorage() => 다음 페이지에서 데이터를 불러오는 함수
+                    // let data = localStorage.getItem('item');
+                    // let parsedData = JSON.parse(data);
+                    // console.log(parsedData.logoSrc);
+                    window.location.hash = '#/detail';
+                });
+            });
+            // 상품의 좋아요 클릭시 이벤트
+            document.querySelectorAll('.recommend__iconFavorite').forEach((item, idx) => {
                 item.addEventListener('click', (e) => {
-                    // console.log(e.target);
-                    // console.log('clicked', idx);
-                    const urlLength = e.target.style.backgroundImage.length;
-                    // console.log('urlL', urlLength);
-                    // console.log(e.target.style.backgroundImage.substr(5, urlLength - 7));
-                    localStorage.setItem('productIndex', idx);
-                    localStorage.setItem(
-                        'productImageUrl',
-                        e.target.style.backgroundImage.substr(6, urlLength - 8)
-                    );
-                    console.log(localStorage.getItem('productIndex'));
-                    console.log(localStorage.getItem('productImageUrl'));
-                    // window.location.href = '/detail';
+                    checkLogin(idx, e);
                 });
             });
         });
@@ -139,15 +184,18 @@ export function renderRecommend() {
     const moveByOneThird = 260 * 4;
 
     itemWrap.addEventListener('mousedown', (e) => {
+        isClicked = true;
         isDown = true;
         startX = e.pageX;
     });
     document.addEventListener('mouseup', () => {
+        isClicked = false;
         isDown = false;
         itemWrap.style.transition = '0.5s';
     });
     document.addEventListener('mousemove', (e) => {
         if (!isDown) return;
+        isClicked = true;
 
         const dx = e.pageX - startX;
 

@@ -12,11 +12,27 @@ function home() {
     renderSlider();
     renderRecommend();
 }
+function detail() {
+    renderHeader();
+    renderSearch();
+}
+function login() {
+    renderHeader();
+    renderSearch();
+}
 // 해시값에 따른 페이지 렌더링 함수
 function renderPage(page) {
+    app.innerHTML = '';
+
     switch (page) {
         case 'home':
             home();
+            break;
+        case 'detail':
+            detail();
+            break;
+        case 'login':
+            login();
             break;
         default:
             app.innerHTML = `<p>page not found</p>`;

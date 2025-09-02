@@ -81,10 +81,13 @@ body {
     display: block;
     width: 17.4px;
     height: 15px;
-    background-image: url(../assets/icons/svg/recommend/favorite_16dp_EFEFEF_FILL0_wght400_GRAD0_opsz20.svg);
+    background-image: url(../assets/icons/svg/recommend/favorite.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+}
+.recommend__iconFavorite.selected {
+    background-image: url(../assets/icons/svg/recommend/favorite_selected.svg);
 }
 .recommend__brand p {
     font-size: 12px;
