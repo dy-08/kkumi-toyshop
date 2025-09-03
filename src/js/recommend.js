@@ -8,8 +8,8 @@ export function renderRecommend() {
                     <!-- . -->
                     <div class="recommend__fitness">
                         <p>
-                            스포츠 종목 아이템 추천<br />
-                            피트니스
+                            지금 무신사 카테고리 트렌드<br />
+                            아우터
                         </p>
                     </div>
 
@@ -21,23 +21,22 @@ export function renderRecommend() {
                     </div>
 
                     <!-- Web to anotherWeb -->
-                    <div class="recommend__btnWrap">
+                    <button class="recommend__btnWrap">
                         <span class="recommend__p"><span></span></span>
                         <span>무신사 플레이어에서 더보기</span>
-                    </div>
-
+                    </button>
                     <!-- slide btns -->
                     <!-- arrows: 40x40(20x20) -->
-                    <span class="recommend__btn--pre"
+                    <button class="recommend__btn--pre"
                         ><img   
                             src="./src/assets/icons/svg/recommend/arrow_back_ios_20dp_000000_FILL0_wght200_GRAD0_opsz20.svg"
                             alt="이전화살표 아이콘"
-                    /></span>
-                    <span class="recommend__btn--next"
+                    /></button>
+                    <button class="recommend__btn--next"
                         ><img
                             src="./src/assets/icons/svg/recommend/arrow_forward_ios_20dp_000000_FILL0_wght200_GRAD0_opsz20.svg"
                             alt="다음화살표 아이콘"
-                    /></span>
+                    /></button>
                 </div>
             </div>
     `;
@@ -48,12 +47,15 @@ export function renderRecommend() {
         const itemBox = document.querySelector('.recommend__itemsInner');
         const div = document.createElement('div');
         div.className = 'recommend__items';
+        const a = document.createElement('a');
+        a.className = 'recommend__item';
+        a.style.cursor = 'pointer';
         const div10 = document.createElement('div');
         div10.className = 'recommend__itemTop';
-        div10.style.backgroundImage = `url(${obj.imageSrc})`;
-        const span = document.createElement('span');
-        span.className = 'recommend__iconFavorite';
-        div10.appendChild(span);
+        div10.style.backgroundImage = `url(${obj.mainImageSrc})`;
+        const button = document.createElement('button');
+        button.className = 'recommend__iconFavorite';
+        div10.appendChild(button);
         const div20 = document.createElement('div');
         div20.className = 'recommend__itemBottom';
         const div21 = document.createElement('div');
@@ -86,17 +88,82 @@ export function renderRecommend() {
         div20.appendChild(div21);
         div20.appendChild(div22);
         div20.appendChild(div23);
-        div.appendChild(div10);
-        div.appendChild(div20);
+        a.appendChild(div10);
+        a.appendChild(div20);
+        div.appendChild(a);
         itemBox.appendChild(div);
+    }
+    // 하트클릭 시 이벤트 (로그인체크)
+    let isClicked = false;
+    function checkLogin(idx, e) {
+        e.stopPropagation(); // 이벤트 버블링 방지
+        isClicked = true;
+        if (!isNaN(idx)) {
+            const isLogin = localStorage.getItem('user');
+            // let isLogin = true; // ✅ 테스트 후 삭제
+            if (!isLogin) {
+                const res = confirm(
+                    '로그인 후 이용할 수 있습니다.\n로그인 페이지로 이동하시겠습니까?'
+                );
+                if (res) {
+                    window.location.hash = '#/login';
+                } else {
+                    isClicked = false;
+                }
+            } else {
+                const fb = document.querySelectorAll('.recommend__iconFavorite')[idx];
+                fb.classList.toggle('selected');
+                if (fb.classList.contains('selected')) {
+                    fb.style.transform = 'scale(1.3)';
+                    setTimeout(() => {
+                        fb.style.transition = 'all 0.3s ease';
+                        fb.style.transform = 'scale(1.1)';
+                    }, 100);
+                } else {
+                    fb.style.transform = 'scale(1)';
+                    fb.style.transition = 'none';
+                }
+                isClicked = false;
+            }
+        }
+    }
+    // 아이템 선택 시 이벤트 (로컬스토리지에 저장)
+    function fetchAndStoreData(idx) {
+        fetch('./public/data/outer.json')
+            .then((response) => response.json())
+            .then((data) => {
+                localStorage.setItem('item', JSON.stringify(data[idx]));
+            });
     }
 
     // 아이템 추가
-    fetch('./public/data/recommend.json')
+    fetch('./public/data/outer.json')
         .then((response) => response.json())
         .then((data) => {
             data.forEach((item) => {
                 addItem(item);
+            });
+            // 상품 클릭시 이벤트
+            document.querySelectorAll('.recommend__item').forEach((item, idx) => {
+                item.addEventListener('click', () => {
+                    if (isClicked) {
+                        isClicked = false;
+                        return;
+                    }
+                    fetchAndStoreData(idx);
+                    // 코드리뷰 후 삭제 ✅
+                    // loadDataFromLocalStorage() => 다음 페이지에서 데이터를 불러오는 함수
+                    // let data = localStorage.getItem('item');
+                    // let parsedData = JSON.parse(data);
+                    // console.log(parsedData.logoSrc);
+                    window.location.hash = '#/detail';
+                });
+            });
+            // 상품의 좋아요 클릭시 이벤트
+            document.querySelectorAll('.recommend__iconFavorite').forEach((item, idx) => {
+                item.addEventListener('click', (e) => {
+                    checkLogin(idx, e);
+                });
             });
         });
 
@@ -117,16 +184,21 @@ export function renderRecommend() {
     const moveByOneThird = 260 * 4;
 
     itemWrap.addEventListener('mousedown', (e) => {
+        isClicked = true;
         isDown = true;
         startX = e.pageX;
     });
     document.addEventListener('mouseup', () => {
+        isClicked = false;
         isDown = false;
         itemWrap.style.transition = '0.5s';
     });
     document.addEventListener('mousemove', (e) => {
         if (!isDown) return;
+        isClicked = true;
+
         const dx = e.pageX - startX;
+
         currentTranslateX += dx;
         startX = e.pageX;
         btnPre.style.opacity = 1;
