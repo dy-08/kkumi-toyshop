@@ -1,0 +1,91 @@
+.detail__inner{
+  width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  background: rgb(250, 250, 250);
+  height: 100vh;
+  border: 1px solid #ebebeb;
+  border-top: none;
+  padding: 16px;
+}
+.detail__inner .detail__left__wrap{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
+}
+.detail__inner .detail__right__wrap{
+  flex: 0;
+}
+.detail__inner .detail__smallImg__box li{
+  max-width: 72px;
+}
+.detail__inner .detail__smallImg__box li + li{
+  margin-top: 4px;
+}
+.detail__inner .detail__smallImg__box li img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.detail__img__slide{
+  max-height: 715px;
+  position: relative;
+}
+.detail__img__slide:hover .detail__slide__control > button{
+  opacity: 1;
+}
+.detail__slide__control{
+  width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16px;
+}
+.detail__slide__control > button{
+  opacity: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fff url(../assets/images/detail/ico_next_arrow.svg) no-repeat center center;
+  background-size: 16px;
+  transition: all 0.2s;
+}
+.detail__slide__control > .prevBtn{
+  background: #fff url(../assets/images/detail/ico_prev_arrow.svg) no-repeat center right 10px;
+  background-size: 16px;
+}
+
+
+.detail__img__slide .detail__slide__count{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+    padding: 0px 7px;
+    height: 24px;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: rgb(255, 255, 255);
+    border-radius: 4px;
+    font-size: 14px;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+
+
+
+
+.detail__slide__box{
+  width: 596px;
+  display: flex;
+  overflow: hidden;
+}
+.detail__slide__box > li{
+  flex-shrink: 0;
+  width: 596px;
+}
