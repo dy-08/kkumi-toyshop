@@ -95,13 +95,13 @@ body.fixed::before {
     transform: translateY(-50%);
     color: rgb(138, 138, 138);
 }
-.search__pop__inputBox .inner button span{
-  font-size: 22px;
+.search__pop__inputBox .inner button span {
+    font-size: 22px;
 }
 .search__pop__inputBox .search__pop--close {
     flex-shrink: 0;
-  }
-  .search__pop__inputBox .search__pop--close span {
+}
+.search__pop__inputBox .search__pop--close span {
     font-size: 28px;
     color: #000;
     vertical-align: middle;
@@ -278,16 +278,17 @@ body.fixed::before {
 }
 
 /* 메인탭 */
-#header{
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 900;
+#header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 900;
 }
-body{
-  width: auto;
-  padding-top: 60px;
+body {
+    width: auto;
+    /* Last updated: 25-09-05 by권영호, padding-top 높이수정 (60px->56px) */
+    padding-top: 56px;
 }
 .mainTab {
     background: #1a1b1f;
@@ -295,7 +296,8 @@ body{
 }
 .mainTab.fixed {
     position: fixed;
-    top: 60px;
+    /* Last updated: 25-09-05 by권영호, top높이수정 (60px->56px) */
+    top: 56px;
     left: 0;
     width: 100%;
     transition: all 0.3s;

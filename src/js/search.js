@@ -199,48 +199,53 @@ export function renderSearch() {
         document.querySelector('.keyword__box').remove();
     });
 
-    
     setInterval(() => {
-      // 날짜계산
-      let today = new Date();
-      let month = today.getMonth() + 1;
-      let date = today.getDate();
-      let todayWrap = document.querySelectorAll('.search__keyword__time');
-  
-      //시간계산
-      let hours = today.getHours();
+        // 날짜계산
+        let today = new Date();
+        let month = today.getMonth() + 1;
+        let date = today.getDate();
+        let todayWrap = document.querySelectorAll('.search__keyword__time');
 
-      todayWrap.forEach((time) => {
-          if (month < 10) {
-            if(date < 10){
-              time.innerText = `0${month}.0${date} ${hours}:00, 기준`;
-            }else{
-              time.innerText = `0${month}.${date} ${hours}:00, 기준`;
-            }
-          } else {
-            if(date < 10){
-              time.innerText = `${month}.0${date} ${hours}:00, 기준`;
-            }else{
-              time.innerText = `${month}.${date} ${hours}:00, 기준`;
-            }
-          }
-      }, 1000 * 60 * 60);
+        //시간계산
+        let hours = today.getHours();
+
+        todayWrap.forEach(
+            (time) => {
+                if (month < 10) {
+                    if (date < 10) {
+                        time.innerText = `0${month}.0${date} ${hours}:00, 기준`;
+                    } else {
+                        time.innerText = `0${month}.${date} ${hours}:00, 기준`;
+                    }
+                } else {
+                    if (date < 10) {
+                        time.innerText = `${month}.0${date} ${hours}:00, 기준`;
+                    } else {
+                        time.innerText = `${month}.${date} ${hours}:00, 기준`;
+                    }
+                }
+            },
+            1000 * 60 * 60
+        );
     });
-
-
 
     // 메인탭 상단 고정
     let mainTab = document.querySelector('.mainTab');
     let bodyF = document.querySelector('body');
-    let mainTabOffsetTop = mainTab.offsetTop - 58;
+    // Last updated: 25-09-05 by권영호, 스크롤이벤트 조건 타겟 변경 ( mainTab.offsetTop - 58 -> .search__wrap.offsetHeight)
+    let searchWrapHeight = document.querySelector('.search__wrap').offsetHeight; // 113px
+    // let mainTabOffsetTop = mainTab.offsetTop - 58; 111px
+
     function scrollTab() {
         let windowS = window.scrollY;
-        if (windowS >= mainTabOffsetTop) {
+        if (windowS >= searchWrapHeight) {
             mainTab.classList.add('fixed');
-            bodyF.style.paddingTop = '108px';
+            // Last updated: 25-09-05 by권영호, 패딩높이수정 (108px->104px)
+            bodyF.style.paddingTop = '104px';
         } else {
             mainTab.classList.remove('fixed');
-            bodyF.style.paddingTop = '60px';
+            // Last updated: 25-09-05 by권영호, 패딩높이수정 (60px->56px)
+            bodyF.style.paddingTop = '56px';
         }
     }
     window.addEventListener('scroll', scrollTab);

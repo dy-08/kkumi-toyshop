@@ -1,81 +1,120 @@
-* {
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    list-style: none;
-}
-body {
-    width: 100vw;
+/* header buttons default Style */
+button {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff')
+        format('woff');
+    font-weight: 500;
+    font-display: swap;
+    color: #ffffffcc;
+    font-size: 16px;
 }
 nav {
     width: 100%;
-    height: 60px;
-    background-color: #1a1b1f;
+    height: 56px;
+    background-color: rgb(26, 27, 31);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 14px;
 }
-
 .header__navBox {
     width: 1440px;
     display: flex;
-    padding: 0 10px;
-}
-.menu {
-    color: #ffffffcc;
+    justify-content: space-between;
 }
 .header__leftBox {
-    width: 60%;
-    height: 60px;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    gap: 8px;
+    gap: 14px;
 }
-
 .header__rightBox {
-    width: 40%;
-    height: 60px;
     display: flex;
+}
+.header__menu {
+    width: 28px;
+    height: 28px;
+    background-image: url(../assets/icons/svg/header/menu.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.header__vertical {
+    display: inline-block;
+    width: 1px;
+    height: 17px;
+    line-height: 17px;
+    background-color: #ffffff66;
+}
+.header__rightBox {
+    display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: flex-end;
-    gap: 4px;
-}
-.header__rightBox button span {
-}
-
-button {
-    background-color: transparent;
-    color: #ffffffcc;
-    border: none;
-    padding: 0 4px;
-}
-.header__leftBox :nth-child(2) {
-    border-left: 1px solid #ffffffcc;
-}
-.header__leftBox :nth-child(9) {
-    border-left: 1px solid#ffffffcc;
-}
-.header__rightBox > button:first-child {
-    border-right: 1px solid #ffffffcc;
-    padding-right: 8px;
-    margin-right: 1px;
-    margin-left: 4px;
-}
-
-.header__rightBox :nth-child(6) {
-    margin-right: 10px;
-    border-radius: 5px;
-    border: 1px solid #ffffffcc;
+    gap: 12px;
 }
 .header__rightBox button {
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 4px;
-    background: none;
-    border: none;
-    color: #ffffffcc;
-    padding: 0 6px;
-    cursor: pointer;
+    gap: 2px;
+}
+.header__rightBox button:first-of-type {
+    font-size: 14px;
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff')
+        format('woff');
+    font-weight: 500;
+    font-display: swap;
+}
+.header__icons ~ span {
+    font-size: 14px;
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff')
+        format('woff');
+    font-weight: 500;
+    font-display: swap;
+}
+/* icons */
+.header__icons {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-top: 2px;
+}
+.header__snap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* 아이콘 각각에 공통 클래스 적용 */
+.icon__chars {
+    display: inline-block;
+    margin-right: 2px;
+    width: 20px;
+    height: 20px;
+    background-image: url('../assets/icons/svg/header/chars.svg');
+}
+.icon__search {
+    background-image: url('../assets/icons/svg/header/search.svg');
+}
+.icon__like {
+    background-image: url('../assets/icons/svg/header/like.svg');
+}
+.icon__mypage {
+    background-image: url('../assets/icons/svg/header/my.svg');
+}
+.icon__cart {
+    background-image: url('../assets/icons/svg/header/cart.svg');
+}
+.signinAndUp {
+    border: 0.5px solid #ededed;
+    padding: 4px 6px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff')
+        format('woff');
+    font-weight: 500;
+    font-display: swap;
 }
