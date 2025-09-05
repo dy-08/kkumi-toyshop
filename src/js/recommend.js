@@ -100,7 +100,7 @@ export function renderRecommend() {
         isClicked = true;
         if (!isNaN(idx)) {
             const isLogin = localStorage.getItem('user');
-            // let isLogin = true; // ✅ 테스트 후 삭제
+            //let isLogin = true; // ✅ 테스트 후 삭제
             if (!isLogin) {
                 const res = confirm(
                     '로그인 후 이용할 수 있습니다.\n로그인 페이지로 이동하시겠습니까?'
