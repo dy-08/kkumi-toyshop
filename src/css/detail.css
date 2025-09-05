@@ -2,8 +2,9 @@
   width: 1440px;
   margin: 0 auto;
   display: flex;
+  justify-content: space-between;
   background: rgb(250, 250, 250);
-  height: 100vh;
+  height: 100%;
   border: 1px solid #ebebeb;
   border-top: none;
   padding: 16px;
@@ -11,12 +12,22 @@
 .detail__inner .detail__left__wrap{
   flex: 1;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: flex-start;
   gap: 16px;
 }
 .detail__inner .detail__right__wrap{
-  flex: 0;
+    flex: 1 1 0%;
+    align-self: flex-start;
+    position: sticky;
+    top: 56px;
+    overflow-y: auto;
+    width: 100%;
+    min-width: 300px;
+    max-width: 434px;
+    height: 100vh;
+    background-color: rgb(250, 250, 250);
+    word-break: break-word;
 }
 .detail__inner .detail__smallImg__box li{
   max-width: 72px;
@@ -75,17 +86,48 @@
     bottom: 5px;
     right: 5px;
 }
-
-
-
-
-
 .detail__slide__box{
   width: 596px;
   display: flex;
+  justify-content: space-between;
   overflow: hidden;
 }
 .detail__slide__box > li{
   flex-shrink: 0;
   width: 596px;
+}
+
+
+
+
+/* 상세정보 -- 은조 */
+.detail__info__wrap{
+  width: 100%;
+}
+.detail__info__wrap .detail__info__tab > ul{
+  display: flex;
+}
+.detail__info__wrap .detail__info__tab > ul li{
+  flex: 1;
+  text-align: center;
+}
+.detail__info__wrap .detail__info__tab > ul li a{
+  display: block;
+  line-height: 40px;
+  width: 100%;
+  color: rgb(138, 138, 138);
+  background-color: rgb(235, 235, 235);
+}
+.detail__info__wrap .detail__info__tab > ul li a.on{
+  background: #fff;
+  color: #000;
+}
+
+
+
+/* 오른쪽 -- 영호 */
+.detail__payment__info{
+  max-width: 434px;
+  background: #fff;
+  width: 100%;
 }
