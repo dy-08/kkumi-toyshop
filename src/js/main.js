@@ -2,6 +2,7 @@ import { renderHeader } from './header.js';
 import { renderSearch } from './search.js';
 import { renderSlider } from './slider.js';
 import { renderRecommend } from './recommend.js';
+import { renderDetail } from './detail.js';
 
 const app = document.getElementById('app');
 
@@ -14,11 +15,10 @@ function home() {
 }
 function detail() {
     renderHeader();
-    renderSearch();
+    renderDetail();
 }
 function login() {
     renderHeader();
-    renderSearch();
 }
 // 해시값에 따른 페이지 렌더링 함수
 function renderPage(page) {

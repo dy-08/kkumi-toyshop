@@ -1,9 +1,7 @@
 export function renderDetail() {
     const section = document.createElement('section');
     section.id = 'detail';
-
     section.innerHTML = `
-<div id="detail">
         <div class="detail__inner">
             <div class="detail__left__wrap">
                 <div class="detail__smallImg__slide">
@@ -56,20 +54,20 @@ export function renderDetail() {
                 </div>
             </div>
         </div>
-    </div>
 `;
+    const app = document.getElementById('app');
+    app.appendChild(section);
 
-let detail__slide__box = document.querySelector('.detail__slide__box');
-      let detail__slide__item = document.querySelectorAll('.detail__slide__box li');
-      let detail__slide__item__img = document.querySelectorAll('.detail__slide__box li img');
-      let detail__slide__count = document.querySelector('.detail__slide__count');
-      let count = 1;
-      detail__slide__count.innerHTML = `${count} / ${detail__slide__item.length}`
-      let smallImg__box = document.querySelector('.detail__smallImg__box');
-      smallImg__box.style.width = detail__slide__item.length * 100 + '%';
+    let detail__slide__box = document.querySelector('.detail__slide__box');
+    let detail__slide__item = document.querySelectorAll('.detail__slide__box li');
+    let detail__slide__item__img = document.querySelectorAll('.detail__slide__box li img');
+    let detail__slide__count = document.querySelector('.detail__slide__count');
+    let count = 1;
+    detail__slide__count.innerHTML = `${count} / ${detail__slide__item.length}`;
+    let smallImg__box = document.querySelector('.detail__smallImg__box');
+    smallImg__box.style.width = detail__slide__item.length * 100 + '%';
 
-
-      detail__slide__item.forEach((item) => {
+    detail__slide__item.forEach((item) => {
         let smallImg__item = document.createElement('li');
         let smallImg__btn = document.createElement('button');
 
@@ -78,15 +76,15 @@ let detail__slide__box = document.querySelector('.detail__slide__box');
 
         smallImg__item.appendChild(smallImg__btn);
         smallImg__box.appendChild(smallImg__item);
-      });
+    });
 
-      let btns = document.querySelectorAll('.detail__smallImg__box button');
-      btns.forEach((btn, idx) => {
+    let btns = document.querySelectorAll('.detail__smallImg__box button');
+    btns.forEach((btn, idx) => {
         btn.classList.toggle('on', idx === 0);
 
         btn.addEventListener('click', () => {
-          btns.forEach((b) => b.classList.remove('on'));
-          btn.classList.add('on');
+            btns.forEach((b) => b.classList.remove('on'));
+            btn.classList.add('on');
         });
-  });
+    });
 }
