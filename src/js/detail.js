@@ -10,7 +10,6 @@ export function renderDetail() {
 
     let slideBox = document.querySelector('.detail__slide__box'); // 큰 이미지 박스
     let smallImgBox = document.querySelector('.detail__smallImg__box'); // 작은 이미지 박스
-
     let imgSrc = document.querySelectorAll('.detail__slide__box img');
     imgSrc.forEach((item) => {
         let src = item.src;
@@ -21,48 +20,87 @@ export function renderDetail() {
         smallImgBox.appendChild(li);
     });
 
-    let slideItem = document.querySelectorAll('.detail__slide__box li'); // 큰 이미지
+    let smallItem = smallImgBox.querySelectorAll('li');
+    smallItem[0].classList.add('on');
 
-    let slideCount = document.querySelector('.detail__slide__count'); // 이미지 카운트
+    smallItem.forEach((item, idx) => {
+        item.addEventListener('click', () => {
+        smallItem.forEach((i) => {
+            i.classList.remove('on')
+        });
+         item.classList.add('on');
+        });
+        
+    })
+
+    let slideItem = document.querySelectorAll('.detail__slide__box li'); // 슬라이드 li
+    let slideCount = document.querySelector('.detail__slide__count');
     let imgTotal = slideItem.length;
+
+    const firstClone = slideItem[0].cloneNode(true);
+    const lastClone = slideItem[imgTotal - 1].cloneNode(true);
+    slideBox.appendChild(firstClone); // 맨 뒤에 첫 번째 복제
+    slideBox.insertBefore(lastClone, slideItem[0]); // 맨 앞에 마지막 복제
+
+    slideItem = document.querySelectorAll('.detail__slide__box li');
+    imgTotal = slideItem.length;
+
     let index = 1;
-    slideCount.textContent = `${index} / ${imgTotal}`;
+    let step = slideItem[0].offsetWidth;
 
-    //     let detail__slide__box = document.querySelector('.detail__slide__box');
-    //     let detail__slide__item = document.querySelectorAll('.detail__slide__box li');
-    //     let detail__slide__item__img = document.querySelectorAll('.detail__slide__box li img');
-    //     let detail__slide__count = document.querySelector('.detail__slide__count');
-    //     let count = 1;
-    //     detail__slide__count.innerHTML = `${count} / ${detail__slide__item.length}`;
-    //     let smallImg__box = document.querySelector('.detail__smallImg__box');
-    //     smallImg__box.style.width = detail__slide__item.length * 100 + '%';
+    // 초기 위치
+    slideBox.style.transition = 'transform 0.3s ease';
+    slideBox.style.transform = `translateX(-${step * index}px)`;
 
-    //     detail__slide__item.forEach((item) => {
-    //         let smallImg__item = document.createElement('li');
-    //         let smallImg__btn = document.createElement('button');
+    // 카운트 초기 표시
+    updateCount();
 
-    //         let img = item.querySelector('img').cloneNode(true);
-    //         smallImg__btn.appendChild(img);
+    function updateCount() {
+        let showIndex = index;
+        if (index === 0) showIndex = imgTotal - 2;
+        else if (index === imgTotal - 1) showIndex = 1;
+        slideCount.textContent = `${showIndex} / ${imgTotal - 2}`;
+    }
 
-    //         smallImg__item.appendChild(smallImg__btn);
-    //         smallImg__box.appendChild(smallImg__item);
-    //     });
+    function next() {
+        index++;
+        slideBox.style.transition = 'transform 0.3s ease';
+        slideBox.style.transform = `translateX(-${step * index}px)`;
+        updateCount();
+    }
 
-    //     let btns = document.querySelectorAll('.detail__smallImg__box button');
-    //     btns.forEach((btn, idx) => {
-    //         btn.classList.toggle('on', idx === 0);
+    function prev() {
+        index--;
+        slideBox.style.transition = 'transform 0.3s ease';
+        slideBox.style.transform = `translateX(-${step * index}px)`;
+        updateCount();
+    }
 
-    //         btn.addEventListener('click', () => {
-    //             btns.forEach((b) => b.classList.remove('on'));
-    //             btn.classList.add('on');
-    //         });
-    //     });
-    // }
+    window.nextBtn = function () {
+        next();
+    }
 
-    // fetch('/data/outer.json')
-    //     .then((response) => response.json())
-    //     .then((data) => {
-    //         renderDetail(data[0]); // 첫 번째 아이템을 렌더링
-    //     })
-    //     .catch((error) => console.error('Error:', error));
+    window.prevBtn = function () {
+        prev();
+    }
+
+    slideBox.addEventListener('transitionend', () => {
+        // 마지막 복제 슬라이드 → 첫 번째 진짜 슬라이드로 점프
+        if (index === imgTotal - 1) {
+            slideBox.style.transition = 'none';
+            index = 1;
+            slideBox.style.transform = `translateX(-${step * index}px)`;
+            slideBox.offsetWidth; // 강제 리플로우
+            slideBox.style.transition = 'transform 0.3s ease';
+        }
+
+        // 첫 번째 복제 슬라이드 → 마지막 진짜 슬라이드로 점프
+        if (index === 0) {
+            slideBox.style.transition = 'none';
+            index = imgTotal - 2;
+            slideBox.style.transform = `translateX(-${step * index}px)`;
+            slideBox.offsetWidth;
+            slideBox.style.transition = 'transform 0.3s ease';
+        }
+    });
 }

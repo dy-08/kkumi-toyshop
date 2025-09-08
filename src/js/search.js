@@ -225,7 +225,7 @@ export function renderSearch() {
                     }
                 }
             },
-            1000 * 60 * 60
+            1200000
         );
     });
 

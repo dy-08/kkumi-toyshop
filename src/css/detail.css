@@ -4,7 +4,6 @@
   display: flex;
   justify-content: space-between;
   background: rgb(250, 250, 250);
-  height: 100%;
   border: 1px solid #ebebeb;
   border-top: none;
   padding: 16px;
@@ -32,6 +31,19 @@
 }
 .detail__inner .detail__smallImg__box li{
   max-width: 72px;
+}
+.detail__inner .detail__smallImg__box li button{
+  position: relative;
+}
+.detail__inner .detail__smallImg__box li button::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid transparent;
+}
+.detail__inner .detail__smallImg__box li.on button::before{
+  border-color: #000;
 }
 .detail__inner .detail__smallImg__box li + li{
   margin-top: 4px;
@@ -102,7 +114,9 @@
   background-size: 16px;
 }
 
-
+.detail__img__slide{
+  overflow: hidden;
+}
 .detail__img__slide .detail__slide__count{
   display: inline-flex;
   align-items: center;
@@ -121,7 +135,7 @@
   width: 596px;
   display: flex;
   justify-content: space-between;
-  overflow: hidden;
+  transition: all 0.3s;
 }
 .detail__slide__box > li{
   flex-shrink: 0;
