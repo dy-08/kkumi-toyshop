@@ -23,14 +23,19 @@ export function renderDetail() {
     let smallItem = smallImgBox.querySelectorAll('li');
     smallItem[0].classList.add('on');
 
-    smallItem.forEach((item, idx) => {
+    function itemMatch(){
+        smallItem.forEach((i) => {
+            i.classList.remove('on')
+        });
+        smallItem[index-1].classList.add('on');
+    }
+    smallItem.forEach((item) => {
         item.addEventListener('click', () => {
         smallItem.forEach((i) => {
             i.classList.remove('on')
         });
-         item.classList.add('on');
+            item.classList.add('on');
         });
-        
     })
 
     let slideItem = document.querySelectorAll('.detail__slide__box li'); // 슬라이드 li
@@ -66,6 +71,7 @@ export function renderDetail() {
         index++;
         slideBox.style.transition = 'transform 0.3s ease';
         slideBox.style.transform = `translateX(-${step * index}px)`;
+        itemMatch();
         updateCount();
     }
 
@@ -73,6 +79,7 @@ export function renderDetail() {
         index--;
         slideBox.style.transition = 'transform 0.3s ease';
         slideBox.style.transform = `translateX(-${step * index}px)`;
+        itemMatch();
         updateCount();
     }
 
@@ -85,21 +92,23 @@ export function renderDetail() {
     }
 
     slideBox.addEventListener('transitionend', () => {
-        // 마지막 복제 슬라이드 → 첫 번째 진짜 슬라이드로 점프
+        // 마지막 복제 슬라이드
         if (index === imgTotal - 1) {
             slideBox.style.transition = 'none';
             index = 1;
             slideBox.style.transform = `translateX(-${step * index}px)`;
-            slideBox.offsetWidth; // 강제 리플로우
+            slideBox.offsetWidth;
+            itemMatch();
             slideBox.style.transition = 'transform 0.3s ease';
         }
 
-        // 첫 번째 복제 슬라이드 → 마지막 진짜 슬라이드로 점프
+        // 첫 번째 복제 슬라이드
         if (index === 0) {
             slideBox.style.transition = 'none';
             index = imgTotal - 2;
             slideBox.style.transform = `translateX(-${step * index}px)`;
             slideBox.offsetWidth;
+            itemMatch();
             slideBox.style.transition = 'transform 0.3s ease';
         }
     });
