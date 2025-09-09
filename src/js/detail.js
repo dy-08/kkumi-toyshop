@@ -29,12 +29,15 @@ export function renderDetail() {
         });
         smallItem[index-1].classList.add('on');
     }
-    smallItem.forEach((item) => {
+    smallItem.forEach((item, idx) => {
         item.addEventListener('click', () => {
-        smallItem.forEach((i) => {
-            i.classList.remove('on')
+            smallItem.forEach((i) => {
+            i.classList.remove('on');
         });
             item.classList.add('on');
+            slideBox.style.transform = `translateX(-${step * (idx+1)}px)`;
+            index = idx+1;
+            updateCount(index);
         });
     })
 
@@ -57,15 +60,15 @@ export function renderDetail() {
     slideBox.style.transition = 'transform 0.3s ease';
     slideBox.style.transform = `translateX(-${step * index}px)`;
 
-    // 카운트 초기 표시
-    updateCount();
-
+    
     function updateCount() {
         let showIndex = index;
-        if (index === 0) showIndex = imgTotal - 2;
-        else if (index === imgTotal - 1) showIndex = 1;
+        if (index == 0) showIndex = imgTotal - 2;
+        else if (index == imgTotal - 1) showIndex = 1;
         slideCount.textContent = `${showIndex} / ${imgTotal - 2}`;
     }
+    // 카운트 초기 표시
+    updateCount();
 
     function next() {
         index++;
@@ -74,7 +77,6 @@ export function renderDetail() {
         itemMatch();
         updateCount();
     }
-
     function prev() {
         index--;
         slideBox.style.transition = 'transform 0.3s ease';
@@ -94,6 +96,7 @@ export function renderDetail() {
     slideBox.addEventListener('transitionend', () => {
         // 마지막 복제 슬라이드
         if (index === imgTotal - 1) {
+            updateCount();
             slideBox.style.transition = 'none';
             index = 1;
             slideBox.style.transform = `translateX(-${step * index}px)`;
@@ -104,6 +107,7 @@ export function renderDetail() {
 
         // 첫 번째 복제 슬라이드
         if (index === 0) {
+            updateCount();
             slideBox.style.transition = 'none';
             index = imgTotal - 2;
             slideBox.style.transform = `translateX(-${step * index}px)`;
@@ -111,5 +115,12 @@ export function renderDetail() {
             itemMatch();
             slideBox.style.transition = 'transform 0.3s ease';
         }
+    });
+
+    // 슬라이드 크게보기 버튼
+    let scaleBtn = document.getElementById('scaleBtn');
+    scaleBtn.addEventListener('click', () =>{
+        document.querySelector('.detail__img__slide').classList.add('scale');
+        document.querySelector('body').classList.add('scale');
     });
 }

@@ -1,4 +1,4 @@
-.detail__inner{
+.detail__inner {
   width: 1440px;
   margin: 0 auto;
   display: flex;
@@ -8,7 +8,7 @@
   border-top: none;
   padding: 16px;
 }
-.detail__inner .detail__left__wrap{
+.detail__inner .detail__left__wrap {
   flex: 1;
   display: flex;
   flex-wrap: wrap;
@@ -16,53 +16,53 @@
   justify-content: center;
   gap: 16px;
 }
-.detail__inner .detail__right__wrap{
-    flex: 1 1 0%;
-    align-self: flex-start;
-    position: sticky;
-    top: 56px;
-    overflow-y: auto;
-    width: 100%;
-    min-width: 300px;
-    max-width: 434px;
-    height: 100vh;
-    background-color: rgb(250, 250, 250);
-    word-break: break-word;
+.detail__inner .detail__right__wrap {
+  flex: 1 1 0%;
+  align-self: flex-start;
+  position: sticky;
+  top: 56px;
+  overflow-y: auto;
+  width: 100%;
+  min-width: 300px;
+  max-width: 434px;
+  height: 100vh;
+  background-color: rgb(250, 250, 250);
+  word-break: break-word;
 }
-.detail__inner .detail__smallImg__box li{
+.detail__inner .detail__smallImg__box li {
   max-width: 72px;
 }
-.detail__inner .detail__smallImg__box li button{
+.detail__inner .detail__smallImg__box li button {
   position: relative;
 }
-.detail__inner .detail__smallImg__box li button::before{
+.detail__inner .detail__smallImg__box li button::before {
   content: '';
   position: absolute;
   width: 100%;
   height: 100%;
   border: 2px solid transparent;
 }
-.detail__inner .detail__smallImg__box li.on button::before{
+.detail__inner .detail__smallImg__box li.on button::before {
   border-color: #000;
 }
-.detail__inner .detail__smallImg__box li + li{
+.detail__inner .detail__smallImg__box li+li {
   margin-top: 4px;
 }
-.detail__inner .detail__smallImg__box li img{
+.detail__inner .detail__smallImg__box li img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.detail__smallImg__box{
+.detail__smallImg__box {
   display: grid;
-    grid-template-rows: repeat(8, 1fr);
-    overflow: hidden;
-    max-height: 715px;
+  grid-template-rows: repeat(8, 1fr);
+  overflow: hidden;
+  max-height: 715px;
 }
-.detail__smallImg__slide{
+.detail__smallImg__slide {
   position: relative;
 }
-.detail__smallImg__slide > button{
+.detail__smallImg__slide>button {
   position: absolute;
   left: 50%;
   /* opacity: 0; */
@@ -73,34 +73,58 @@
   background-size: 12px;
   transition: all 0.2s;
 }
-.detail__smallImg__slide .prevBtn{
+.detail__smallImg__slide .prevBtn {
   top: 0px;
   transform: rotate(-90deg) translate(-50%, calc(-23px / 2))
 }
-.detail__smallImg__slide .nextBtn{
+.detail__smallImg__slide .nextBtn {
   bottom: 0px;
   transform: rotate(90deg) translate(-50%, calc(23px / 2))
 }
-
-
-.detail__img__slide{
+.detail__img__slide {
   max-height: 715px;
   position: relative;
 }
-.detail__img__slide:hover .detail__slide__control > button{
-  opacity: 1;
+body.scale{
+  overflow: hidden;
 }
-.detail__slide__control{
+body.scale::before{
+  content: '';
+  position: fixed;
   width: 100%;
-    position: absolute;
+  height: 100vh;
+  background: #000;
+  z-index: 901;
+  top: 0;
+  left: 0;
+}
+.detail__img__slide.scale{
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    display: flex;
-    justify-content: space-between;
-    padding: 0 16px;
+    z-index: 902;
 }
-.detail__slide__control > button{
+.detail__img__slide:hover .detail__slide__control>button {
+  opacity: 1;
+}
+.detail__img__slide.scale .detail__slide__control > button{
+  opacity: 1;
+}
+.detail__img__slide.scale .detail__slide__btnWrap #scaleBtn{
+  display: none;
+}
+.detail__slide__control {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+.detail__slide__control>button {
   opacity: 0;
   width: 40px;
   height: 40px;
@@ -109,70 +133,91 @@
   background-size: 16px;
   transition: all 0.2s;
 }
-.detail__slide__control > .prevBtn{
+.detail__slide__control>.prevBtn {
   background: #fff url(../assets/images/detail/ico_prev_arrow.svg) no-repeat center right 10px;
   background-size: 16px;
 }
-
-.detail__img__slide{
+.detail__img__slide {
   overflow: hidden;
 }
-.detail__img__slide .detail__slide__count{
+.detail__slide__btnWrap {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+}
+.detail__img__slide.scale .detail__slide__btnWrap {
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+        bottom: 5px;
+}
+.detail__img__slide .detail__slide__count {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-    padding: 0px 7px;
-    height: 24px;
-    background-color: rgba(0, 0, 0, 0.2);
-    color: rgb(255, 255, 255);
-    border-radius: 4px;
-    font-size: 14px;
-    position: absolute;
-    bottom: 5px;
-    right: 5px;
+  padding: 0px 7px;
+  height: 24px;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: rgb(255, 255, 255);
+  border-radius: 4px;
+  font-size: 14px;
 }
-.detail__slide__box{
+.detail__slide__btnWrap #scaleBtn {
+  width: 24px;
+  height: 24px;
+  padding: 2px;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.detail__slide__btnWrap .scale_closeBtn{
+  width: 30px;
+  height: 30px;
+}
+.detail__slide__box {
   width: 596px;
   display: flex;
   justify-content: space-between;
   transition: all 0.3s;
 }
-.detail__slide__box > li{
+.detail__slide__box>li {
   flex-shrink: 0;
   width: 596px;
 }
-
-
-
-
+.detail__img__slide.scale .detail__slide__count{
+  background-color: transparent;
+  font-size: 13px;
+    letter-spacing: 0;
+    line-height: 18px;
+    color: rgb(138 138 138);
+}
 
 /* 상세정보 -- 은조 */
-.detail__info__wrap{
+.detail__info__wrap {
   width: 100%;
 }
-.detail__info__wrap .detail__info__tab > ul{
+.detail__info__wrap .detail__info__tab>ul {
   display: flex;
 }
-.detail__info__wrap .detail__info__tab > ul li{
+.detail__info__wrap .detail__info__tab>ul li {
   flex: 1;
   text-align: center;
 }
-.detail__info__wrap .detail__info__tab > ul li a{
+.detail__info__wrap .detail__info__tab>ul li a {
   display: block;
   line-height: 40px;
   width: 100%;
   color: rgb(138, 138, 138);
   background-color: rgb(235, 235, 235);
 }
-.detail__info__wrap .detail__info__tab > ul li a.on{
+.detail__info__wrap .detail__info__tab>ul li a.on {
   background: #fff;
   color: #000;
 }
-
-
-
 /* 오른쪽 -- 영호 */
-.detail__payment__info{
+.detail__payment__info {
   max-width: 434px;
   background: #fff;
   width: 100%;
