@@ -1,41 +1,58 @@
 [
     {
         "mainImageSrc": "./src/assets/images/recommend/2467287_17522115112632_500.webp",
-        "subImageSrc1": "./src/assets/images/outer/2467287_17522115112632_500.webp",
-        "subImageSrc2": "./src/assets/images/outer/detail_4508986_17286292163373_big.webp",
+        "subImageSrc": [
+            "./src/assets/images/outer/2467287_17522115112632_500.webp",
+            "./src/assets/images/outer/detail_4508986_17286292163373_big.webp"
+        ],
         "logoSrc": "./src/assets/images/outer/logo/moo.png",
         "brandName": "엠오오",
         "category": "후드 집업",
         "itemName": "레오파드 아플리케 후드집업 - 브라운",
         "originPrice": "112,000",
         "discount": "40",
-        "discountPrice": "67,200"
+        "discountPrice": "67,200",
+        "colors": ["#663203"],
+        "colorsKR": ["브라운"],
+        "colorsEG": ["Brown"],
+        "size": ["S(논기모)", "M(논기모)", "L(논기모)", "S(기모)", "M(기모)", "L(기모)"]
     },
     {
         "mainImageSrc": "./src/assets/images/outer/4578352_17362156231826_big.webp",
+        "subImageSrc": ["./src/assets/images/outer/4578352_17362156231826_big.webp"],
         "logoSrc": "./src/assets/images/outer/logo/frenchchic.png",
         "brandName": "프렌치시크",
         "category": "후드 집업",
         "itemName": "(후드ver.)코스에그 자수 투웨이 니트집업 후드가디건",
         "originPrice": "39,800",
         "discount": "5",
-        "discountPrice": "37,810"
+        "discountPrice": "37,810",
+        "colors": ["#999999", "#E60618", "#002062", "#E0DCC7", "#000000"],
+        "colorsKR": ["그레이", "레드", "네이비", "오트밀", "블랙"],
+        "colorsEG": ["Gray", "Red", "Navy", "Oatmeal", "Black"],
+        "size": ["FREE(55-66)"]
     },
     {
         "mainImageSrc": "./src/assets/images/outer/4322935_17548929276217_big.webp",
-        "subImageSrc1": "./src/assets/images/outer/4322935_17548929276217_big.webp",
-        "subImageSrc2": "./src/assets/images/outer/detail_4322935_17548929284320_big.webp",
-        "subImageSrc3": "./src/assets/images/outer/detail_4322935_17548929286509_big.webp",
-        "subImageSrc4": "./src/assets/images/outer/detail_4322935_17548929288892_big.webp",
-        "subImageSrc5": "./src/assets/images/outer/fcafb16d91c74bc9bea1ae13220f885b.webp",
-        "subImageSrc6": "./src/assets/images/outer/f069c9bce64d42bcafe0b9f19f458d3d.webp",
+        "subImageSrc": [
+            "./src/assets/images/outer/4322935_17548929276217_big.webp",
+            "./src/assets/images/outer/detail_4322935_17548929284320_big.webp",
+            "./src/assets/images/outer/detail_4322935_17548929286509_big.webp",
+            "./src/assets/images/outer/detail_4322935_17548929288892_big.webp",
+            "./src/assets/images/outer/fcafb16d91c74bc9bea1ae13220f885b.webp",
+            "./src/assets/images/outer/f069c9bce64d42bcafe0b9f19f458d3d.webp"
+        ],
         "logoSrc": "./src/assets/images/outer/logo/sculptor.png",
         "brandName": "스컬프터",
         "category": "후드 집업",
         "itemName": "Beaded Saint Hoodie Zip-Up Dirty White",
         "originPrice": "198,000",
         "discount": "15",
-        "discountPrice": "168,300"
+        "discountPrice": "168,300",
+        "colors": [],
+        "colorsKR": [],
+        "colorsEG": [],
+        "size": ["XS", "S", "M", "L"]
     },
     {
         "mainImageSrc": "./src/assets/images/outer/4607052_17313930085177_big.webp",
@@ -52,373 +69,583 @@
         "discountPrice": "92,380",
         "colors": ["#E6C280", "#002062"],
         "colorsKR": ["베이지", "네이버"],
-        "colorsEG": ["beige", "navy"],
+        "colorsEG": ["Beige", "Navy"],
         "size": ["F"]
     },
     {
         "mainImageSrc": "./src/assets/images/outer/4865280_17412435810020_big.webp",
-        "subImageSrc1": "./src/assets/images/outer/4865280_17412435810020_big.webp",
-        "subImageSrc2": "./src/assets/images/outer/f7ff4b2be59b4d35a9843ac265572687.webp",
-        "subImageSrc3": "./src/assets/images/outer/ab2372bf4b704e40a67d9870f06f5a28.webp",
+        "subImageSrc": [
+            "./src/assets/images/outer/4865280_17412435810020_big.webp",
+            "./src/assets/images/outer/f7ff4b2be59b4d35a9843ac265572687.webp",
+            "./src/assets/images/outer/ab2372bf4b704e40a67d9870f06f5a28.webp"
+        ],
         "logoSrc": "./src/assets/images/outer/logo/speronewomen.png",
         "brandName": "스페로네 우먼",
         "category": "블루종/MA-1",
         "itemName": "디트로이트 셔링 봄버 자켓 우먼 (아이보리)",
         "originPrice": "198,000",
         "discount": "30",
-        "discountPrice": "139,000"
+        "discountPrice": "139,000",
+        "colors": [],
+        "colorsKR": [],
+        "colorsEG": [],
+        "size": ["FREE"]
     },
     {
         "mainImageSrc": "./src/assets/images/outer/3406375_16953644888129_big.webp",
-        "subImageSrc1": "./src/assets/images/outer/3406375_16953644888129_big.webp",
-        "subImageSrc2": "./src/assets/images/outer/detail_3406375_16928798595349_big.webp",
-        "subImageSrc3": "./src/assets/images/outer/detail_3406375_16928798606025_big.webp",
-        "subImageSrc4": "./src/assets/images/outer/detail_3406375_16928798620369_big.webp",
-        "subImageSrc5": "./src/assets/images/outer/detail_3406375_16928798634399_big.webp",
+        "subImageSrc": [
+            "./src/assets/images/outer/3406375_16953644888129_big.webp",
+            "./src/assets/images/outer/detail_3406375_16928798595349_big.webp",
+            "./src/assets/images/outer/detail_3406375_16928798606025_big.webp",
+            "./src/assets/images/outer/detail_3406375_16928798620369_big.webp",
+            "./src/assets/images/outer/detail_3406375_16928798634399_big.webp"
+        ],
         "logoSrc": "./src/assets/images/outer/logo/lmood.png",
         "brandName": "엘무드",
         "category": "블루종/MA-1",
         "itemName": "벌키 크롭 봄버 자켓 블랙",
         "originPrice": "298,000",
         "discount": "35",
-        "discountPrice": "193,700"
+        "discountPrice": "193,700",
+        "colors": [],
+        "colorsKR": [],
+        "colorsEG": [],
+        "size": ["44", "46", "48"]
     },
     {
         "mainImageSrc": "./src/assets/images/outer/2139011_3_big.webp",
-        "subImageSrc1": "./src/assets/images/outer/2139011_3_big.webp",
-        "subImageSrc2": "./src/assets/images/outer/staff_6503bc6f5fc66.webp",
-        "subImageSrc3": "./src/assets/images/outer/staff_657fa07d4a5e6.webp",
-        "subImageSrc4": "./src/assets/images/outer/staff_657f9e2db7d24.webp",
-        "subImageSrc5": "./src/assets/images/outer/staff_657a4addab756.webp",
+        "subImageSrc": [
+            "./src/assets/images/outer/2139011_3_big.webp",
+            "./src/assets/images/outer/staff_6503bc6f5fc66.webp",
+            "./src/assets/images/outer/staff_657fa07d4a5e6.webp",
+            "./src/assets/images/outer/staff_657f9e2db7d24.webp",
+            "./src/assets/images/outer/staff_657a4addab756.webp"
+        ],
         "logoSrc": "./src/assets/images/outer/logo/ladyvolume.png",
         "brandName": "레이디 볼륨",
         "category": "레더/라이더스 재킷",
         "itemName": "465-1 비건 레더 오버핏 자켓",
         "originPrice": "89,900",
         "discount": "23",
-        "discountPrice": "69,500"
+        "discountPrice": "69,500",
+        "colors": [],
+        "colorsKR": [],
+        "colorsEG": [],
+        "size": ["FREE"]
     },
     {
         "mainImageSrc": "./src/assets/images/outer/4729711_17556734293009_big.webp",
-        "subImageSrc1": "./src/assets/images/outer/4729711_17556734293009_big.webp",
-        "subImageSrc2": "./src/assets/images/outer/detail_4729711_17556734385978_big.webp",
-        "subImageSrc3": "./src/assets/images/outer/detail_4729711_17556734416492_big.webp",
-        "subImageSrc4": "./src/assets/images/outer/detail_4729711_17556734433469_big.webp",
-        "subImageSrc5": "./src/assets/images/outer/detail_4729711_17556734448658_big.webp",
+        "subImageSrc": [
+            "./src/assets/images/outer/4729711_17556734293009_big.webp",
+            "./src/assets/images/outer/detail_4729711_17556734385978_big.webp",
+            "./src/assets/images/outer/detail_4729711_17556734416492_big.webp",
+            "./src/assets/images/outer/detail_4729711_17556734433469_big.webp",
+            "./src/assets/images/outer/detail_4729711_17556734448658_big.webp"
+        ],
         "logoSrc": "./src/assets/images/outer/logo/musinsastandardwoman.png",
         "brandName": "무신사 스탠다드 우먼",
         "category": "레더/라이더스 재킷",
         "itemName": "우먼즈 신세틱 스웨이드 레이서 재킷 [브라운]",
         "originPrice": "119,900",
         "discount": "20",
-        "discountPrice": "95,890"
+        "discountPrice": "95,890",
+        "colors": [],
+        "colorsKR": [],
+        "colorsEG": [],
+        "size": ["XS", "S", "M", "L"]
     },
     {
         "mainImageSrc": "./src/assets/images/outer/406537_5_big.webp",
-        "subImageSrc1": "./src/assets/images/outer/406537_5_big.webp",
-        "subImageSrc2": "./src/assets/images/outer/detail_406537_1_big.webp",
-        "subImageSrc3": "./src/assets/images/outer/detail_406537_2_big.webp",
-        "subImageSrc4": "./src/assets/images/outer/detail_406537_3_big.webp",
-        "subImageSrc5": "./src/assets/images/outer/detail_406537_4_big.webp",
+        "subImageSrc": [
+            "./src/assets/images/outer/406537_5_big.webp",
+            "./src/assets/images/outer/detail_406537_1_big.webp",
+            "./src/assets/images/outer/detail_406537_2_big.webp",
+            "./src/assets/images/outer/detail_406537_3_big.webp",
+            "./src/assets/images/outer/detail_406537_4_big.webp"
+        ],
         "logoSrc": "./src/assets/images/outer/logo/doffjason.png",
         "brandName": "도프제이슨",
         "category": "레더/라이더스 재킷",
         "itemName": "카우하이드 싱글 자켓",
         "originPrice": "339,000",
         "discount": "28",
-        "discountPrice": "245,000"
+        "discountPrice": "245,000",
+        "colors": [],
+        "colorsKR": [],
+        "colorsEG": [],
+        "size": ["S", "M", "L", "XL", "2XL"]
     },
     {
         "mainImageSrc": "./src/assets/images/outer/4019582_17520439947361_big.webp",
-        "subImageSrc1": "./src/assets/images/outer/4019582_17520439947361_big.webp",
-        "subImageSrc2": "./src/assets/images/outer/detail_4019582_17121096529428_big.webp",
-        "subImageSrc3": "./src/assets/images/outer/detail_4019582_17453775459307_big.webp",
-        "subImageSrc4": "./src/assets/images/outer/detail_4019582_17453775519029_big.webp",
+        "subImageSrc": [
+            "./src/assets/images/outer/4019582_17520439947361_big.webp",
+            "./src/assets/images/outer/detail_4019582_17121096529428_big.webp",
+            "./src/assets/images/outer/detail_4019582_17453775459307_big.webp",
+            "./src/assets/images/outer/detail_4019582_17453775519029_big.webp"
+        ],
         "logoSrc": "./src/assets/images/outer/logo/twee.png",
         "brandName": "트위",
         "category": "카디건",
         "itemName": "에덴 레이스 나시 가디건 SET",
         "originPrice": "49,900",
         "discount": "10",
-        "discountPrice": "44,900"
+        "discountPrice": "44,900",
+        "colors": ["#675F59", "#C6ADA5", "#7A89B1", "#ABABAB"],
+        "colorsKR": ["아이보리", "핑크", "스카이블루", "라이트그레이"],
+        "colorsEG": ["Ivory", "Pink", "Sky Blue", "Light Gray"],
+        "size": ["F"]
     },
     {
         "mainImageSrc": "./src/assets/images/outer/5020206_17497811459924_big.webp",
-        "subImageSrc1": "./src/assets/images/outer/5020206_17497811459924_big.webp",
-        "subImageSrc2": "./src/assets/images/outer/detail_5020206_17497811521356_big.webp",
-        "subImageSrc3": "./src/assets/images/outer/detail_5020206_17497811560423_big.webp",
+        "subImageSrc": [
+            "./src/assets/images/outer/5020206_17497811459924_big.webp",
+            "./src/assets/images/outer/detail_5020206_17497811521356_big.webp",
+            "./src/assets/images/outer/detail_5020206_17497811560423_big.webp"
+        ],
         "logoSrc": "./src/assets/images/outer/logo/hyojinoriko.png",
         "brandName": "효지",
         "category": "카디건",
         "itemName": "25 SS 워셔블 루즈핏 크롭 라운드 하찌 반팔 니트 가디건 (8컬러)",
         "originPrice": "69,000",
         "discount": "38",
-        "discountPrice": "42,990"
+        "discountPrice": "42,990",
+        "colors": [
+            "#002062",
+            "#000000",
+            "#FEFFEF",
+            "#E60618",
+            "#2CAC15",
+            "#663203",
+            "#5CC1E7",
+            "#2220FC"
+        ],
+        "colorsKR": [
+            "네이비",
+            "블랙",
+            "크림",
+            "레드",
+            "그린",
+            "모브브라운",
+            "스카이그레이",
+            "코발트블루"
+        ],
+        "colorsEG": [
+            "Navy",
+            "Black",
+            "Cream",
+            "Red",
+            "Green",
+            "Mauve Brown",
+            "Sky Gray",
+            "Cobalt Blue"
+        ],
+        "size": ["M", "L"]
     },
     {
         "mainImageSrc": "./src/assets/images/outer/4506977_17286135568142_big.webp",
-        "subImageSrc1": "./src/assets/images/outer/4506977_17286135568142_big.webp",
-        "subImageSrc2": "./src/assets/images/outer/detail_4506977_17286135684329_big.webp",
-        "subImageSrc3": "./src/assets/images/outer/detail_4506977_17286136059137_big.webp",
-        "subImageSrc4": "./src/assets/images/outer/detail_4506977_17286135845639_big.webp",
-        "subImageSrc5": "./src/assets/images/outer/detail_4506977_17286135950933_big.webp",
-        "subImageSrc6": "./src/assets/images/outer/detail_4506977_17286136271732_big.webp",
-        "subImageSrc7": "./src/assets/images/outer/detail_4506977_17286136355602_big.webp",
-        "subImageSrc8": "./src/assets/images/outer/detail_4506977_17286136522496_big.webp",
-        "subImageSrc9": "./src/assets/images/outer/detail_4506977_17286136603815_big.webp",
-        "subImageSrc10": "./src/assets/images/outer/0067fc4d298744d6bc8d102dee5ef261.webp",
+        "subImageSrc": [
+            "./src/assets/images/outer/4506977_17286135568142_big.webp",
+            "./src/assets/images/outer/detail_4506977_17286135684329_big.webp",
+            "./src/assets/images/outer/detail_4506977_17286136059137_big.webp",
+            "./src/assets/images/outer/detail_4506977_17286135845639_big.webp",
+            "./src/assets/images/outer/detail_4506977_17286135950933_big.webp",
+            "./src/assets/images/outer/detail_4506977_17286136271732_big.webp",
+            "./src/assets/images/outer/detail_4506977_17286136355602_big.webp",
+            "./src/assets/images/outer/detail_4506977_17286136522496_big.webp",
+            "./src/assets/images/outer/detail_4506977_17286136603815_big.webp",
+            "./src/assets/images/outer/0067fc4d298744d6bc8d102dee5ef261.webp"
+        ],
         "logoSrc": "./src/assets/images/outer/logo/rosefrantz.png",
         "brandName": "카디건",
         "category": "cardigan",
         "itemName": "Eyelet Round Cardigan [9color]",
         "originPrice": "59,000",
         "discount": "5",
-        "discountPrice": "56,050"
+        "discountPrice": "56,050",
+        "colors": [
+            "#000000",
+            "#FFFFFF",
+            "#999999",
+            "#F8119F",
+            "#F9E17D",
+            "#5CC1E7",
+            "#E6C280",
+            "#002062",
+            "#E60618"
+        ],
+        "colorsKR": [
+            "블랙",
+            "화이트",
+            "그레이",
+            "핑크",
+            "버터",
+            "스카이블루",
+            "베이지",
+            "네이비",
+            "로즈 레드"
+        ],
+        "colorsEG": [
+            "Black",
+            "White",
+            "Gray",
+            "Pink",
+            "Butter",
+            "Sky Blue",
+            "Beige",
+            "Navy",
+            "Rose Red"
+        ],
+        "size": ["F"]
     },
     {
         "mainImageSrc": "./src/assets/images/outer/2720158_1_big.webp",
-        "subImageSrc1": "./src/assets/images/outer/2720158_1_big.webp",
-        "subImageSrc2": "./src/assets/images/outer/detail_2720158_1_big.webp",
-        "subImageSrc3": "./src/assets/images/outer/detail_2720158_2_big.webp",
-        "subImageSrc4": "./src/assets/images/outer/detail_2720158_3_big.webp",
+        "subImageSrc": [
+            "./src/assets/images/outer/2720158_1_big.webp",
+            "./src/assets/images/outer/detail_2720158_1_big.webp",
+            "./src/assets/images/outer/detail_2720158_2_big.webp",
+            "./src/assets/images/outer/detail_2720158_3_big.webp"
+        ],
         "logoSrc": "./src/assets/images/outer/logo/frizmworks.png",
         "brandName": "프리즘웍스",
         "category": "트러커 재킷",
         "itemName": "DENIM OVERSIZED BDU JACKET_BLACK",
         "originPrice": "169,000",
         "discount": "60",
-        "discountPrice": "67,600"
+        "discountPrice": "67,600",
+        "colors": [],
+        "colorsKR": [],
+        "colorsEG": [],
+        "size": ["M", "L", "XL"]
     },
     {
         "mainImageSrc": "./src/assets/images/outer/4262843_17550438657493_big.webp",
-        "subImageSrc1": "./src/assets/images/outer/4262843_17550438657493_big.webp",
-        "subImageSrc2": "./src/assets/images/outer/detail_4262843_17550438707211_big.webp",
-        "subImageSrc3": "./src/assets/images/outer/detail_4262843_17550438737577_big.webp",
-        "subImageSrc4": "./src/assets/images/outer/detail_4262843_17550438771229_big.webp",
-        "subImageSrc5": "./src/assets/images/outer/detail_4262843_17550438810905_big.webp",
-        "subImageSrc6": "./src/assets/images/outer/detail_4262843_17550438847735_big.webp",
-        "subImageSrc7": "./src/assets/images/outer/detail_4262843_17550438880558_big.webp",
+        "subImageSrc": [
+            "./src/assets/images/outer/4262843_17550438657493_big.webp",
+            "./src/assets/images/outer/detail_4262843_17550438707211_big.webp",
+            "./src/assets/images/outer/detail_4262843_17550438737577_big.webp",
+            "./src/assets/images/outer/detail_4262843_17550438771229_big.webp",
+            "./src/assets/images/outer/detail_4262843_17550438810905_big.webp",
+            "./src/assets/images/outer/detail_4262843_17550438847735_big.webp",
+            "./src/assets/images/outer/detail_4262843_17550438880558_big.webp"
+        ],
         "logoSrc": "./src/assets/images/outer/logo/outstanding.png",
         "brandName": "아웃스탠딩",
         "category": "트러커 재킷",
         "itemName": "[MUT lab] W.W. II SELVEDGE DENIM 1ST JACKET_INDIGO",
         "originPrice": "159,000",
         "discount": "10",
-        "discountPrice": "143,100"
+        "discountPrice": "143,100",
+        "colors": [],
+        "colorsKR": [],
+        "colorsEG": [],
+        "size": ["S", "M", "L", "XL"]
     },
     {
         "mainImageSrc": "./src/assets/images/outer/4846421_17421201039875_big.webp",
-        "subImageSrc1": "./src/assets/images/outer/4846421_17421201039875_big.webp",
-        "subImageSrc2": "./src/assets/images/outer/detail_4846421_17421201111745_big.webp",
-        "subImageSrc3": "./src/assets/images/outer/detail_4846421_17421201120819_big.webp",
-        "subImageSrc4": "./src/assets/images/outer/detail_4846421_17421201137512_big.webp",
-        "subImageSrc5": "./src/assets/images/outer/detail_4846421_17421201145255_big.webp",
+        "subImageSrc": [
+            "./src/assets/images/outer/4846421_17421201039875_big.webp",
+            "./src/assets/images/outer/detail_4846421_17421201111745_big.webp",
+            "./src/assets/images/outer/detail_4846421_17421201120819_big.webp",
+            "./src/assets/images/outer/detail_4846421_17421201137512_big.webp",
+            "./src/assets/images/outer/detail_4846421_17421201145255_big.webp"
+        ],
         "logoSrc": "./src/assets/images/outer/logo/decoroso.png",
         "brandName": "데꼬로소",
         "category": "트러커 재킷",
         "itemName": "다트 워싱 데님 트러커 자켓 [로우 블랙]",
         "originPrice": "190,000",
         "discount": "32",
-        "discountPrice": "128,500"
+        "discountPrice": "128,500",
+        "colors": [],
+        "colorsKR": [],
+        "colorsEG": [],
+        "size": ["L", "XL"]
     },
     {
         "mainImageSrc": "./src/assets/images/outer/5258175_17539213620129_big.webp",
-        "subImageSrc1": "./src/assets/images/outer/5258175_17539213620129_big.webp",
-        "subImageSrc2": "./src/assets/images/outer/detail_5258175_17530619385482_big.webp",
+        "subImageSrc": [
+            "./src/assets/images/outer/5258175_17539213620129_big.webp",
+            "./src/assets/images/outer/detail_5258175_17530619385482_big.webp"
+        ],
         "logoSrc": "./src/assets/images/outer/logo/roem.png",
         "brandName": "로엠",
         "category": "슈트/블레이저 재킷",
         "itemName": "올데이자켓 버튼업 칼라리스 트위드 반팔자켓_RMJKF38S99",
         "originPrice": "99,900",
         "discount": "30",
-        "discountPrice": "69,930"
+        "discountPrice": "69,930",
+        "colors": ["#000000", "#FEFFEF", "#5CC1E7"],
+        "colorsKR": ["블랙", "아이보리", "라이트블루"],
+        "colorsEG": ["Black", "Ivory", "Light Blue"],
+        "size": ["XS", "S", "M", "L"]
     },
     {
         "mainImageSrc": "./src/assets/images/outer/3543005_17261044244672_big.webp",
-        "subImageSrc1": "./src/assets/images/outer/3543005_17261044244672_big.webp",
-        "subImageSrc2": "./src/assets/images/outer/detail_3543005_17261043985091_big.webp",
-        "subImageSrc3": "./src/assets/images/outer/detail_3543005_17253607207413_big.webp",
+        "subImageSrc": [
+            "./src/assets/images/outer/3543005_17261044244672_big.webp",
+            "./src/assets/images/outer/detail_3543005_17261043985091_big.webp",
+            "./src/assets/images/outer/detail_3543005_17253607207413_big.webp"
+        ],
+        "": "./src/assets/images/outer/detail_3543005_17253607207413_big.webp",
         "logoSrc": "./src/assets/images/outer/logo/hyojinoriko.png",
         "brandName": "효지",
         "category": "슈트/블레이저 재킷",
         "itemName": "[ 여름 ver추가 ] 유니크 2버튼 크롭 자켓 (4컬러)",
         "originPrice": "159,900",
         "discount": "38",
-        "discountPrice": "99,000"
+        "discountPrice": "99,000",
+        "colors": ["#473E3F", "#161415", "#27264E", "#9D8667"],
+        "colorsKR": ["차콜", "블랙", "네이비", "베이지"],
+        "colorsEG": ["Charcoal", "Black", "Navy", "Beige"],
+        "size": ["M", "L", "XL"]
     },
     {
         "mainImageSrc": "./src/assets/images/outer/4782745_17393461631146_big.webp",
-        "subImageSrc1": "./src/assets/images/outer/4782745_17393461631146_big.webp",
-        "subImageSrc2": "./src/assets/images/outer/detail_4782745_17393461684030_big.webp",
-        "subImageSrc3": "./src/assets/images/outer/detail_4782745_17393461693152_big.webp",
+        "subImageSrc": [
+            "./src/assets/images/outer/4782745_17393461631146_big.webp",
+            "./src/assets/images/outer/detail_4782745_17393461684030_big.webp",
+            "./src/assets/images/outer/detail_4782745_17393461693152_big.webp"
+        ],
         "logoSrc": "./src/assets/images/outer/logo/khakipoint.png",
         "brandName": "카키포인트",
         "category": "슈트/블레이저 재킷",
         "itemName": "Tailored Jacket (black)",
         "originPrice": "181,000",
         "discount": "15",
-        "discountPrice": "153,850"
+        "discountPrice": "153,850",
+        "colors": [],
+        "colorsKR": [],
+        "colorsEG": [],
+        "size": ["FREE"]
     },
     {
         "mainImageSrc": "./src/assets/images/outer/4525859_17303410419130_big.webp",
-        "subImageSrc1": "./src/assets/images/outer/4525859_17303410419130_big.webp",
-        "subImageSrc2": "./src/assets/images/outer/detail_4525859_17303410636813_big.webp",
-        "subImageSrc3": "./src/assets/images/outer/detail_4525859_17303410647268_big.webp",
-        "subImageSrc4": "./src/assets/images/outer/detail_4525859_17303410669375_big.webp",
-        "subImageSrc5": "./src/assets/images/outer/detail_4525859_17303410680902_big.webp",
+        "subImageSrc": [
+            "./src/assets/images/outer/4525859_17303410419130_big.webp",
+            "./src/assets/images/outer/detail_4525859_17303410636813_big.webp",
+            "./src/assets/images/outer/detail_4525859_17303410647268_big.webp",
+            "./src/assets/images/outer/detail_4525859_17303410669375_big.webp",
+            "./src/assets/images/outer/detail_4525859_17303410680902_big.webp"
+        ],
         "logoSrc": "./src/assets/images/outer/logo/newera.png",
         "brandName": "뉴에라",
         "category": "스타디움 재킷",
         "itemName": "MLB LA다저스 스타디움 재킷 블랙",
         "originPrice": "199,000",
         "discount": "",
-        "discountPrice": ""
+        "discountPrice": "",
+        "colors": [],
+        "colorsKR": [],
+        "colorsEG": [],
+        "size": ["S", "M", "L", "XL", "2XL"]
     },
     {
         "mainImageSrc": "./src/assets/images/outer/2906349_2_big.webp",
-        "subImageSrc1": "./src/assets/images/outer/2906349_2_big.webp",
+        "subImageSrc": ["./src/assets/images/outer/2906349_2_big.webp"],
         "logoSrc": "./src/assets/images/outer/logo/jemut.png",
         "brandName": "제멋",
         "category": "스타디움 재킷",
         "itemName": "프라임 오버핏 스타디움 자켓 2종 블랙 OYOT2455",
         "originPrice": "82,000",
         "discount": "10",
-        "discountPrice": "73,900"
+        "discountPrice": "73,900",
+        "colors": [],
+        "colorsKR": [],
+        "colorsEG": [],
+        "size": ["M", "L", "XL", "2XL"]
     },
     {
         "mainImageSrc": "./src/assets/images/outer/3451630_16916520372382_big.webp",
-        "subImageSrc1": "./src/assets/images/outer/3451630_16916520372382_big.webp",
-        "subImageSrc2": "./src/assets/images/outer/detail_3451630_16916520477994_big.webp",
-        "subImageSrc3": "./src/assets/images/outer/detail_3451630_16916520523631_big.webp",
-        "subImageSrc4": "./src/assets/images/outer/detail_3451630_16916520649966_big.webp",
+        "subImageSrc": [
+            "./src/assets/images/outer/3451630_16916520372382_big.webp",
+            "./src/assets/images/outer/detail_3451630_16916520477994_big.webp",
+            "./src/assets/images/outer/detail_3451630_16916520523631_big.webp",
+            "./src/assets/images/outer/detail_3451630_16916520649966_big.webp"
+        ],
         "logoSrc": "./src/assets/images/outer/logo/noiago.png",
         "brandName": "노이아고",
         "category": "스타디움 재킷",
         "itemName": "NOI1015 코듀로이 바시티 자켓 (브라운)",
         "originPrice": "146,000",
         "discount": "40",
-        "discountPrice": "87,600"
+        "discountPrice": "87,600",
+        "colors": [],
+        "colorsKR": [],
+        "colorsEG": [],
+        "size": ["FREE"]
     },
     {
         "mainImageSrc": "./src/assets/images/outer/5280669_17550514689027_big.webp",
-        "subImageSrc1": "./src/assets/images/outer/5280669_17550514689027_big.webp",
-        "subImageSrc2": "./src/assets/images/outer/detail_5280669_17550514875889_big.webp",
-        "subImageSrc3": "./src/assets/images/outer/detail_5280669_17550514885105_big.webp",
-        "subImageSrc4": "./src/assets/images/outer/detail_5280669_17550514893325_big.webp",
-        "subImageSrc5": "./src/assets/images/outer/detail_5280669_17550514904664_big.webp",
-        "subImageSrc6": "./src/assets/images/outer/detail_5280669_17550514914866_big.webp",
+        "subImageSrc": [
+            "./src/assets/images/outer/5280669_17550514689027_big.webp",
+            "./src/assets/images/outer/detail_5280669_17550514875889_big.webp",
+            "./src/assets/images/outer/detail_5280669_17550514885105_big.webp",
+            "./src/assets/images/outer/detail_5280669_17550514893325_big.webp",
+            "./src/assets/images/outer/detail_5280669_17550514904664_big.webp",
+            "./src/assets/images/outer/detail_5280669_17550514914866_big.webp"
+        ],
         "logoSrc": "./src/assets/images/outer/logo/nerdy.png",
         "brandName": "엔디와이",
         "category": "트레이닝 재킷",
         "itemName": "클래식 NY 스웻 트랙 탑 블랙",
         "originPrice": "99,000",
         "discount": "5",
-        "discountPrice": "94,050"
+        "discountPrice": "94,050",
+        "colors": [],
+        "colorsKR": [],
+        "colorsEG": [],
+        "size": ["XS", "S", "M"]
     },
     {
         "mainImageSrc": "./src/assets/images/outer/4307075_17524663984063_big.webp",
-        "subImageSrc1": "./src/assets/images/outer/4307075_17524663984063_big.webp",
-        "subImageSrc2": "./src/assets/images/outer/detail_4307075_17398630936416_big.webp",
-        "subImageSrc3": "./src/assets/images/outer/229e3abcc2ca466baca1bdf87424564a.webp",
-        "subImageSrc4": "./src/assets/images/outer/07d1d98325424305a399c58842c036c3.webp",
+        "subImageSrc": [
+            "./src/assets/images/outer/4307075_17524663984063_big.webp",
+            "./src/assets/images/outer/detail_4307075_17398630936416_big.webp",
+            "./src/assets/images/outer/229e3abcc2ca466baca1bdf87424564a.webp",
+            "./src/assets/images/outer/07d1d98325424305a399c58842c036c3.webp"
+        ],
         "logoSrc": "./src/assets/images/outer/logo/nerdy.png",
         "brandName": "엔디와이",
         "category": "트레이닝 재킷",
         "itemName": "클래식 NY 트랙 탑 라이트베이지",
         "originPrice": "99,000",
         "discount": "10",
-        "discountPrice": "89,100"
+        "discountPrice": "89,100",
+        "colors": ["#E0DCC7", "#000000"],
+        "colorsKR": ["라이트베이지", "블랙"],
+        "colorsEG": ["Light beige", "Black"],
+        "size": ["XS", "S", "M", "L"]
     },
     {
         "mainImageSrc": "./src/assets/images/outer/4702438_17363209709916_big.webp",
-        "subImageSrc1": "./src/assets/images/outer/4702438_17363209709916_big.webp",
-        "subImageSrc2": "./src/assets/images/outer/detail_4702438_17363209769087_big.webp",
-        "subImageSrc3": "./src/assets/images/outer/detail_4702438_17363209777562_big.webp",
-        "subImageSrc4": "./src/assets/images/outer/detail_4702438_17363209797998_big.webp",
+        "subImageSrc": [
+            "./src/assets/images/outer/4702438_17363209709916_big.webp",
+            "./src/assets/images/outer/detail_4702438_17363209769087_big.webp",
+            "./src/assets/images/outer/detail_4702438_17363209777562_big.webp",
+            "./src/assets/images/outer/detail_4702438_17363209797998_big.webp"
+        ],
         "logoSrc": "./src/assets/images/outer/logo/adidas.png",
         "brandName": "아디다스",
         "category": "트레이닝 재킷",
         "itemName": "파이어버드 니트 탑 - 트레이스브라운 / JD4604",
         "originPrice": "109,000",
         "discount": "",
-        "discountPrice": ""
+        "discountPrice": "",
+        "colors": [],
+        "colorsKR": [],
+        "colorsEG": [],
+        "size": ["2XS", "XS", "S", "M", "L", "XL", "2XL"]
     },
     {
         "mainImageSrc": "./src/assets/images/outer/4715344_17367348030783_big.webp",
-        "subImageSrc1": "./src/assets/images/outer/4715344_17367348030783_big.webp",
-        "subImageSrc2": "./src/assets/images/outer/detail_4715344_17367348065238_big.webp",
-        "subImageSrc3": "./src/assets/images/outer/detail_4715344_17367348077777_big.webp",
+        "subImageSrc": [
+            "./src/assets/images/outer/4715344_17367348030783_big.webp",
+            "./src/assets/images/outer/detail_4715344_17367348065238_big.webp",
+            "./src/assets/images/outer/detail_4715344_17367348077777_big.webp"
+        ],
         "logoSrc": "./src/assets/images/outer/logo/thenorthface.png",
         "brandName": "노스페이스",
         "category": "패딩 베스트",
         "itemName": "NV1DR80J 화이트라벨 여성 노벨티 눕시 RDS 다운 베스트_BLACK",
         "originPrice": "258,000",
         "discount": "",
-        "discountPrice": ""
+        "discountPrice": "",
+        "colors": [],
+        "colorsKR": [],
+        "colorsEG": [],
+        "size": ["85", "90", "95", "100"]
     },
     {
         "mainImageSrc": "./src/assets/images/outer/2780704_1_big.webp",
-        "subImageSrc1": "./src/assets/images/outer/2780704_1_big.webp",
-        "subImageSrc2": "./src/assets/images/outer/detail_2780704_1_big.webp",
-        "subImageSrc3": "./src/assets/images/outer/detail_2780704_2_big.webp",
-        "subImageSrc4": "./src/assets/images/outer/detail_2780704_3_big.webp",
+        "subImageSrc": [
+            "./src/assets/images/outer/2780704_1_big.webp",
+            "./src/assets/images/outer/detail_2780704_1_big.webp",
+            "./src/assets/images/outer/detail_2780704_2_big.webp",
+            "./src/assets/images/outer/detail_2780704_3_big.webp"
+        ],
         "logoSrc": "./src/assets/images/outer/logo/kirsh.png",
         "brandName": "키르시",
         "category": "패딩 베스트",
         "itemName": "두들 체리 써클 로고 패딩 베스트 [네이비]",
         "originPrice": "109,000",
         "discount": "70",
-        "discountPrice": "32,700"
+        "discountPrice": "32,700",
+        "colors": [],
+        "colorsKR": [],
+        "colorsEG": [],
+        "size": ["S", "M"]
     },
     {
         "mainImageSrc": "./src/assets/images/outer/2225709_1_big.webp",
-        "subImageSrc1": "./src/assets/images/outer/2225709_1_big.webp",
-        "subImageSrc2": "./src/assets/images/outer/detail_2225709_1_big.webp",
-        "subImageSrc3": "./src/assets/images/outer/detail_2225709_2_big.webp",
-        "subImageSrc4": "./src/assets/images/outer/detail_2225709_3_big.webp",
+        "subImageSrc": [
+            "./src/assets/images/outer/2225709_1_big.webp",
+            "./src/assets/images/outer/detail_2225709_1_big.webp",
+            "./src/assets/images/outer/detail_2225709_2_big.webp",
+            "./src/assets/images/outer/detail_2225709_3_big.webp"
+        ],
         "logoSrc": "./src/assets/images/outer/logo/nicknicole.png",
         "brandName": "닉앤니콜",
         "category": "패딩 베스트",
         "itemName": "PUFFER PADDING VEST_2 COLOR",
         "originPrice": "128,000",
         "discount": "30",
-        "discountPrice": "89,600"
+        "discountPrice": "89,600",
+        "colors": ["#BBB7AB", "#2E2D33"],
+        "colorsKR": ["크림", "블랙"],
+        "colorsEG": ["Cream", "Black"],
+        "size": ["F"]
     },
     {
         "mainImageSrc": "./src/assets/images/outer/4616579_17320622057322_big.webp",
-        "subImageSrc1": "./src/assets/images/outer/4616579_17320622057322_big.webp",
-        "subImageSrc2": "./src/assets/images/outer/detail_4616579_17320622190250_big.webp",
-        "subImageSrc3": "./src/assets/images/outer/detail_4616579_17316325623051_big.webp",
+        "subImageSrc": [
+            "./src/assets/images/outer/4616579_17320622057322_big.webp",
+            "./src/assets/images/outer/detail_4616579_17320622190250_big.webp",
+            "./src/assets/images/outer/detail_4616579_17316325623051_big.webp"
+        ],
         "logoSrc": "./src/assets/images/outer/logo/placestudio.png",
         "brandName": "플레이스 스튜디오",
         "category": "겨울 싱글 코트",
         "itemName": "래글런 부클 플리스 울 블렌디드 발마칸 벨티드 로브 롱 코트 [블랙]",
         "originPrice": "99,000",
         "discount": "30",
-        "discountPrice": "69,300"
+        "discountPrice": "69,300",
+        "colors": ["#1B1C1E"],
+        "colorsKR": ["블랙"],
+        "colorsEG": ["Black"],
+        "size": ["FREE"]
     },
     {
         "mainImageSrc": "./src/assets/images/outer/4209266_17300784219047_big.webp",
-        "subImageSrc1": "./src/assets/images/outer/4209266_17300784219047_big.webp",
-        "subImageSrc2": "./src/assets/images/outer/detail_4209266_17276866140846_big.webp",
-        "subImageSrc3": "./src/assets/images/outer/detail_4209266_17276866152669_big.webp",
+        "subImageSrc": [
+            "./src/assets/images/outer/4209266_17300784219047_big.webp",
+            "./src/assets/images/outer/detail_4209266_17276866140846_big.webp",
+            "./src/assets/images/outer/detail_4209266_17276866152669_big.webp"
+        ],
         "logoSrc": "./src/assets/images/outer/logo/musinsastandard.png",
         "brandName": "무신사 스탠다드",
         "category": "겨울 싱글 코트",
         "itemName": "울 블렌드 오버사이즈 머프 발마칸 코트 [블랙]",
         "originPrice": "159,900",
         "discount": "",
-        "discountPrice": ""
+        "discountPrice": "",
+        "colors": [],
+        "colorsKR": [],
+        "colorsEG": [],
+        "size": ["M", "L", "XL", "2XL"]
     },
     {
         "mainImageSrc": "./src/assets/images/outer/4643375_17328596215551_big.webp",
-        "subImageSrc1": "./src/assets/images/outer/4643375_17328596215551_big.webp",
+        "subImageSrc": ["./src/assets/images/outer/4643375_17328596215551_big.webp"],
         "logoSrc": "./src/assets/images/outer/logo/deheve.png",
         "brandName": "드헤베",
         "category": "겨울 싱글 코트",
         "itemName": "Formal Balmacaan Wool Coat [Gray]",
         "originPrice": "219,000",
         "discount": "5",
-        "discountPrice": "208,050"
+        "discountPrice": "208,050",
+        "colors": [],
+        "colorsKR": [],
+        "colorsEG": [],
+        "size": ["FREE"]
     }
 ]
