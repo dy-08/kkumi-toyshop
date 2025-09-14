@@ -259,10 +259,17 @@ body.scale::before {
 /* Fixed: 100~200 */
 /* 100 */
 .detail__selectBox {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff')
+        format('woff');
+    font-weight: 400;
+    font-display: swap;
     max-width: 434px;
     background: #ffffffcc;
     width: 100%;
     position: fixed;
+    /* 현재 aside 높이가 늘어나도 스크롤안됨 이벤트 추가예정 ✅ */
+    overflow-y: auto;
     z-index: 100;
     box-sizing: border-box;
 }
@@ -442,15 +449,12 @@ body.scale::before {
 }
 .detail__productForm__colorsTitle {
     display: inline-block;
-    /* padding-left: 26px; */ /*js로*/
-    /* transform: translateY(-1px); */ /*js로*/
 }
-/* 🔑 */
-.detail__productForm__colors > .detail__colors__firstSpan {
+.detail__productForm__colors > #detail__colors__firstSpan {
+    display: inline-block;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    /* background-color: #f31110; */ /* js로 */
     width: 16px;
     height: 16px;
     border-radius: 50%;
@@ -480,7 +484,7 @@ body.scale::before {
 }
 
 /*  */
-.detail__product__display--selected {
+.detail__product__innerWrap {
     padding: 16px;
     background-color: #f5f5f5;
     border-radius: 4px;
@@ -488,6 +492,7 @@ body.scale::before {
     flex-direction: column;
     justify-content: center;
     gap: 10px;
+    margin-bottom: 8px;
 }
 .detail__product__displayInner {
     display: flex;
@@ -513,8 +518,30 @@ body.scale::before {
 }
 .detail__product__displayInner > div:first-of-type {
     display: flex;
-    gap: 10px;
     align-items: center;
+}
+.detail__seletedProduct__display {
+    gap: 4px;
+}
+.detail__seletedProduct__display > span {
+    display: inline-block;
+    font-size: 13px;
+}
+.detail__display__color {
+    display: inline-block;
+    /* background-color: #f31110; */
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    margin-bottom: 4px;
+}
+.detail__display__eg {
+    margin-left: 4px;
+}
+.detail__display__eg,
+.detail__display__size,
+.u-middleDot {
+    transform: translateY(-2px);
 }
 .detail__product__quantityWrap {
     border: 0.5px solid #e4e4e4;
@@ -541,6 +568,9 @@ body.scale::before {
 .detail__iconPlus {
     background-image: url(../assets/icons/svg/detail/plus.svg);
 }
+.maximumQuantity {
+    margin-left: 10px;
+}
 .detail__product__quantity {
     font-family: 'Apple SD Gothic Neo';
     width: 42px;
@@ -555,8 +585,6 @@ body.scale::before {
 input.detail__product__quantity:disabled {
     background-color: white;
 }
-/*  */
-
 .detail__btns {
     width: 100%;
     display: flex;

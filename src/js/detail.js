@@ -95,27 +95,8 @@ export function renderDetail() {
                         </div>
                         <div class="detail__productForm">
                             <ul class="detail__productForm__colors"><span id='detail__colors__firstSpan'></span><span class="detail__productForm__colorsTitle">컬러</span></ul>
-                            <ul class="detail__productForm__sizes">사이즈</ul>
+                            <ul class="detail__productForm__sizes"><span class="detail__productForm__sizesTitle">사이즈</span></ul>
                             <div class="detail__product__display--selected">
-                                <div class="detail__product__displayInner">
-                                    <div class="u-text-14 detail__seletedProduct__display">
-                                        colorsdisplay+colorEG추가+size
-                                    </div>
-                                    <div class="detail__icons detail__iconClose"></div>
-                                </div>
-                                <div class="detail__product__displayInner">
-                                    <div>
-                                        <div class="detail__product__quantityWrap">
-                                            <button class="detail__icons detail__iconMinus" disabled></button>
-                                            <input type="number" class="detail__product__quantity u-text-13" value="1" disabled/>
-                                            <button class="detail__icons detail__iconPlus"></button>
-                                        </div>
-                                        <div>
-                                            <span class="u-text-11 u-color-8a">최대 3개</span>
-                                        </div>
-                                    </div>
-                                    <span class="detail__discountPrice u-text-14"></span>
-                                </div>
                             </div>
                             <div class="detail__btns">
                                 <div>
@@ -289,23 +270,81 @@ export function renderDetail() {
         content.textContent = `${item.discountPrice}원`;
     });
 
+    // 아이템 랜더링
     const formColor = document.querySelector('.detail__productForm__colors');
     const formSize = document.querySelector('.detail__productForm__sizes');
-    const oldSpan = document.querySelector('.detail__productForm__colorsTitle');
+    const colorsColorCode = document.getElementById('detail__colors__firstSpan');
+    // Last updated: 25-09-15
+    // 태그로 미리 자리를 잡아줘서 구현함 (colorsTitle, sizesTitle)
+    const colorsTitle = document.querySelector('.detail__productForm__colorsTitle');
+    const sizesTitle = document.querySelector('.detail__productForm__sizesTitle');
+    // 플래그변수
+    let isSelected = false;
+    // 선택된 데이터 저장소
+    let selectedItem = [];
+    // 셀렉아이템 카운트
+    let displayItemCounter = 0;
 
-    // 셀렉폼 렌더링
-    // 컬러
+    // 선택된 아이템 랜더링
+    // 색상이 없을 시에 대한 예외처리도 되어있지않음 (예: 색상이 없을시 구조분해할당 순서 변경필요)✅
+    // 중복에 대한 예외처리 되어있지않음 (예: 아이템중복 시 추가안되고 이미추가된아이템이라고 경고)✅
+    const showSelectedVariant = () => {
+        let [color, eg, size] = selectedItem;
+        const display = document.querySelector('.detail__product__display--selected');
+        const div = document.createElement('div');
+        const div1 = document.createElement('div');
+        const div2 = document.createElement('div');
+        div.className = 'detail__product__innerWrap';
+        div1.className = 'detail__product__displayInner';
+        div2.className = 'detail__product__displayInner';
+        div1.innerHTML = `
+            <div class="u-text-14 detail__seletedProduct__display">
+                <span class="detail__display__color"></span><span class="detail__display__eg"></span><span class="u-middleDot">·</span><span class="detail__display__size"></span>
+            </div>
+            <div class="detail__icons detail__iconClose"></div>
+        `;
+        div2.innerHTML = `
+            <div>
+                <div class="detail__product__quantityWrap">
+                    <button class="detail__icons detail__iconMinus" disabled></button>
+                    <input type="number" class="detail__product__quantity u-text-13" value="1" disabled/>
+                    <button class="detail__icons detail__iconPlus"></button>
+                </div>
+                <div>
+                    <span class="u-text-11 u-color-8a maximumQuantity">최대 3개</span>
+                </div>
+            </div>
+            <span class="detail__discountPrice u-text-14"></span>
+        `;
+        div.appendChild(div1);
+        div.appendChild(div2);
+        display.appendChild(div);
+        document.querySelectorAll('.detail__display__color')[
+            displayItemCounter
+        ].style.backgroundColor = color;
+        document.querySelectorAll('.detail__display__eg')[displayItemCounter].textContent = eg;
+        document.querySelectorAll('.detail__display__size')[displayItemCounter].textContent = size;
+        displayItemCounter++;
+        selectedItem = [];
+    };
+
+    // Initailize
+    // 컬러가 존재하지않을 때 예외처리
+    if (!item.colors.length) {
+        formColor.style.display = 'none';
+    }
+
+    // 색상 랜더링
     formColor.addEventListener('click', () => {
         formColor.innerHTML = '';
         formColor.classList.toggle('selected');
         formColor.classList.toggle('radius');
         formSize.classList.toggle('removed');
 
-        oldSpan.className = 'detail__productForm__colorsTitle';
-        oldSpan.textContent = '컬러';
-        formColor.appendChild(oldSpan);
+        // 🌟
+        formColor.appendChild(colorsColorCode);
+        formColor.appendChild(colorsTitle);
 
-        // li 추가
         item.colors.forEach((color, idx) => {
             const span = document.createElement('span');
             span.className = 'detail__productColor';
@@ -315,39 +354,54 @@ export function renderDetail() {
             li.appendChild(span);
             formColor.appendChild(li);
         });
-        // 컬러
+
+        // 색상선택
         const colors = formColor.querySelectorAll('li');
         colors.forEach((color, index) =>
             color.addEventListener('click', () => {
-                console.log(index);
-                console.log('2:', item.colors[index]);
-                console.log(item.colorsEG[index].toUpperCase());
-                console.log(formColor.firstChild);
-                console.log(oldSpan);
-
-                const span = document.createElement('span');
-                span.className = 'detail__productForm__colorsTitle';
-                span.style.paddingLeft = '26px';
-                span.style.transform = 'translateY(-1px)';
-                span.textContent = item.colorsEG[index].toUpperCase();
-                formColor.replaceChild(span, oldSpan);
-
-                // formColor.textContent = item.colorsEG[index].toUpperCase();
-                // console.log(colorsTitle);
-                // firstSpan.style.backgroundColor = `${item.colors[index]}`;
+                isSelected = true; // 색상이 확정됨 (핸들링)
+                colorsColorCode.style.backgroundColor = item.colors[index];
+                console.log('아이템의 색상:', item.colors[index]);
+                selectedItem.push(item.colors[index]);
+                colorsTitle.innerText = color.innerText;
+                console.log('아이템의 색상의 한글이름:', color.innerText);
+                selectedItem.push(color.innerText);
+                colorsTitle.style.paddingLeft = '20px';
+                colorsTitle.style.transform = 'translateY(-1px)';
             })
         );
     });
-    // 사이즈
+    // 사이즈 랜더링
     formSize.addEventListener('click', () => {
+        // 컬러가 존재하지만 선택되지않았을 때 예외처리
+        if (item.colors.length && !isSelected) {
+            const message = `상위 옵션을 선택해주세요.`;
+            alert(message);
+            return;
+        }
+        formSize.innerHTML = '';
+
         formSize.classList.toggle('radius');
         formSize.classList.toggle('selected');
-        formSize.innerHTML = '';
-        formSize.textContent = '사이즈';
+
+        formSize.appendChild(sizesTitle);
+
         item.size.forEach((size) => {
             const li = document.createElement('li');
             li.textContent = size;
             formSize.appendChild(li);
+        });
+
+        // 사이즈선택
+        const sizes = formSize.querySelectorAll('li');
+        sizes.forEach((size) => {
+            size.addEventListener('click', () => {
+                sizesTitle.innerText = size.innerText;
+                console.log('아이템의 사이즈:', size.innerText);
+                selectedItem.push(size.innerText);
+                console.log('3개의 아이템이 저장된 배열:', selectedItem);
+                setTimeout(showSelectedVariant, 100);
+            });
         });
     });
 }
